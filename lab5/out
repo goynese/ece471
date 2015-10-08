@@ -1,0 +1,26 @@
+Using: /usr/local/apps/synopsys/current_hspice/hspice/linux/hspice  250nm_sim_deck !
+ ****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+  Copyright (C) 2011 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: 250nm_sim_deck                                                    
+  Command line options: 250nm_sim_deck !
+ lic:  
+ lic: FLEXlm: v10.8 
+ lic: USER:   goynese              HOSTNAME: dear119-11.engr.oregonstate.edu 
+ lic: HOSTID: 7446a09dad6e         PID:      24106 
+ lic: Using FLEXlm license file: 
+ lic: 7188@license.eecs.oregonstate.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 11-aug-2014/2013.03 
+ lic: 1(in_use)/50(total) FLOATING license(s) on SERVER license.eecs.oregonstate
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/current_hspice/hspice/meta.cfg
+ **warning** (./LAB5_netlist.spi:82)'.end' can not exist in include/lib files, ignored
+ **error** (/nfs/guille/u1/c/cdsmgr/cdsmgr/pdk/CDK1.4/local/models/hspice/public/publicModel/tsmc25dN:6)duplicated model definition 'tsmc25dN' 
+
+               ***** job aborted
+ lic: Release hspice token(s) 

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+setenv CDS_SITE ~cdsmgr/cdsmgr/pdk/CDK1.4/local
+setenv SKIP_CDS_DIALOG 0 	
+setenv USE_NCSU_CDK 0
+setenv CDS_Netlisting_Mode Analog
+
+./icfb &
+

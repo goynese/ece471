@@ -1,0 +1,26 @@
+#
+ECE471 inverter2 layout
+I2
+I1
+#ISCELL
+ECE471 M4_M3 symbolic
+I7
+I3
+#ISCELL
+ECE471 M5_M4 symbolic
+I8
+I4
+#ISCELL
+ECE471 metal3 symbolic
+I9
+#ISCELL
+ECE471 metal1 symbolic
+I16
+I15
+I14
+#ISCELL
+ECE471 M2_M1 symbolic
+I5
+#ISCELL
+ECE471 M3_M2 symbolic
+I6

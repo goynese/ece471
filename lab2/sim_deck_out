@@ -1,0 +1,465 @@
+Using: /usr/local/apps/synopsys/current_hspice/hspice/linux/hspice sim_deck
+ ****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+  Copyright (C) 2011 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: sim_deck                                                          
+  Command line options: sim_deck
+ lic:  
+ lic: FLEXlm: v10.8 
+ lic: USER:   goynese              HOSTNAME: dear119-10.engr.oregonstate.edu 
+ lic: HOSTID: 7446a09dacc3         PID:      12396 
+ lic: Using FLEXlm license file: 
+ lic: 7188@license.eecs.oregonstate.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 11-aug-2014/2013.03 
+ lic: 17(in_use)/50(total) FLOATING license(s) on SERVER license.eecs.oregonstat
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/current_hspice/hspice/meta.cfg
+ **warning** (./netlist.spi:38)'.end' can not exist in include/lib files, ignored
+
+ **warning**  runlvl smaller than 5, reset to 5  when accurate turned on
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+
+ **warning**  runlvl smaller than 5, reset to 5  when accurate turned on
+
+ **warning** multiple output options specified, using post    
+
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+     0:sup                                                     = 5.000e-02      
+     0:tphl                                                    =-1.235e-29      
+     0:tplh                                                    =-1.235e-29      
+     0:istatic                                                 =-1.235e-29      
+     0:static                                                  =-1.235e-29      
+     0:start_dynamic                                           =-1.235e-29      
+     0:stop_dynamic                                            =-1.235e-29      
+     0:idynamic                                                =-1.235e-29      
+     0:dynamic                                                 =-1.235e-29      
+     0:resultint                                               =-1.235e-29      
+     0:energy                                                  =-1.235e-29      
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            2.9815e+02   4.1163e-21   2.5692e-02   1.1156e+00   1.2565e+16 
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  mos   model parameters tnom=  25.000 temp=  25.000 *****
+ ***************************************************************************
+ ***        model parameters  model name:   0:tsmc25dn model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.1            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=        0.4         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    5.8e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=          0 meter          lmax=          0 meter   
+        wmin=          0 meter          wmax=          0 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=4.39347e-09 meter          wint= 2.1265e-09 meter   
+       lmult=          1               wmult=          1         
+          ll=          0                 lln=          1         
+          lw=          0                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=          0         
+         wwn=          1                 wwl=          0         
+         dwg=-3.40903e-09 m/V             dwb=2.79484e-09 m/V^1/2 
+          xl=     -3e-08                  xw=          0         
+          a0=    1.23186                 ags=   0.304333 V^-1    
+          b0=6.67749e-08 meter            b1=      5e-06 meter   
+        keta=0.000851805 V^-1           voff=  -0.102605 V       
+       ngate=          0 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=   0.430894 V               nch= 2.3549e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx= 1.4659e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=   0.351943 V^1/2            k2=  0.0298493         
+          k3=      0.001                 k3b=  0.0592323 V^-1    
+          w0=      1e-05 meter          dvt0=  0.0183405         
+        dvt1= 0.00489758                dvt2= -0.0252658 V^-1    
+       dvt0w=          0 meter^-1      dvt1w=          0 meter^-1
+       dvt2w=          0 V^-1           dsub= 0.00304547         
+        eta0= 0.00348737                etab=0.000455799 V^-1    
+          u0=    455.303 cm^2/V/sec         ua=5.22359e-10 m/V     
+          ub=1.10471e-18 (m/V)^2          uc=3.28789e-11 V^-1    
+        vsat=     105099 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=    509.568 ohm-um         prwg=  0.0227558 V^-1    
+        prwb=     -0.001 V^-1/2           wr=          1         
+        pclm=    1.04463             pdiblc1=   0.144195         
+     pdiblc2=0.000451338             pdiblcb=-2.81676e-05 V^-1    
+      pscbe1=1.76111e+10 V/m          pscbe2=3.77292e-09 V/m     
+       drout=   0.469872                pvag=  0.0361824         
+     nfactor=   0.134489                cdsc= 0.00152751 f/m^2   
+       cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+         cit=          0 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=4.39347e-09 meter   
+         dwc= 2.1265e-09 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   6.27e-10 f/m     
+        cgdo=   6.27e-10 f/m            cgbo=          0 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=9.33852e-11 f/m     
+        tnom=     300.15 K               kt1=      -0.11 V       
+        kt1l=          0                 kt2=      0.022         
+         ute=       -1.5                 ua1=   4.31e-09 m/V     
+         ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+          at=      33000 m/s             prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=      1e+20                noib=      50000         
+        noic=   -1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         0                 hdif=         0 meter    
+        ldif=         0 meter             js=         0 amp/m^2  
+         jsw=         0 amp/m            xti=         0          
+           n=         1                   cj=0.00191866 f/m^2    
+          mj=  0.472173                   pb=  0.978405 V        
+        cjsw=4.44159e-10 f/m             mjsw=  0.287112          
+         php=  0.978405 V               pbsw (not used)           
+      cjgate=4.44159e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+       lketa=-0.00614406               wketa=0.000751269         
+       pvth0= 0.00134299                 pk2=-0.00314072         
+       prdsw=   -61.8357         
+ ***************************************************************************
+ ***        model parameters  model name:   0:tsmc25dp model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.1            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=        0.4         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    5.8e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=          0 meter          lmax=          0 meter   
+        wmin=          0 meter          wmax=          0 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=8.71907e-09 meter          wint=2.74881e-08 meter   
+       lmult=          1               wmult=          1         
+          ll=          0                 lln=          1         
+          lw=          0                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=          0         
+         wwn=          1                 wwl=          0         
+         dwg=-4.08759e-08 m/V             dwb=2.03201e-08 m/V^1/2 
+          xl=     -3e-08                  xw=          0         
+          a0=    1.38264                 ags=   0.419298 V^-1    
+          b0= 2.8441e-06 meter            b1=      5e-06 meter   
+        keta=  0.0208695 V^-1           voff=      -0.15 V       
+       ngate=          0 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=  -0.615873 V               nch= 4.1589e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=      1e-09 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=   0.459838 V^1/2            k2=  0.0399415         
+          k3=          0                 k3b=    8.74107 V^-1    
+          w0=      1e-06 meter          dvt0=   0.624949         
+        dvt1=   0.203296                dvt2= -0.0513763 V^-1    
+       dvt0w=          0 meter^-1      dvt1w=          0 meter^-1
+       dvt2w=          0 V^-1           dsub=    1.02871         
+        eta0=   0.324124                etab=    -0.1842 V^-1    
+          u0=    158.675 cm^2/V/sec         ua=2.20002e-10 m/V     
+          ub=4.45742e-18 (m/V)^2          uc=1.02138e-10 V^-1    
+        vsat=     185064 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=    968.546 ohm-um         prwg=  -0.102648 V^-1    
+        prwb=     -0.325 V^-1/2           wr=          1         
+        pclm=    5.26546             pdiblc1= 0.00422834         
+     pdiblc2= 0.00120452             pdiblcb= 0.00237525 V^-1    
+      pscbe1=3.01146e+10 V/m          pscbe2=3.03704e-07 V/m     
+       drout=          0                pvag=    8.95643         
+     nfactor=    1.54605                cdsc=0.000141332 f/m^2   
+       cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+         cit=          0 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=8.71907e-09 meter   
+         dwc=2.74881e-08 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   5.59e-10 f/m     
+        cgdo=   5.59e-10 f/m            cgbo=          0 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=9.33852e-11 f/m     
+        tnom=     300.15 K               kt1=      -0.11 V       
+        kt1l=          0                 kt2=      0.022         
+         ute=       -1.5                 ua1=   4.31e-09 m/V     
+         ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+          at=      33000 m/s             prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=    9.9e+18                noib=       2400         
+        noic=    1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         0                 hdif=         0 meter    
+        ldif=         0 meter             js=         0 amp/m^2  
+         jsw=         0 amp/m            xti=         0          
+           n=         1                   cj=0.00188286 f/m^2    
+          mj=  0.467979                   pb=  0.989132 V        
+        cjsw=3.67186e-10 f/m             mjsw=  0.356213          
+         php=  0.989132 V               pbsw (not used)           
+      cjgate=3.67186e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+       lketa= -0.0232426               lvsat=     125700         
+       wketa= 0.00410049               pvth0= 0.00392376         
+         pk2= 0.00206176               prdsw=    15.3953         
+  **warning** (sim_deck:7) Both nodes of element vgnd are connected together; Line ignored.
+  **info** (sim_deck:34) DC voltage reset to initial transient source value              in source        0:vin                 new dc=  0.0000D+00
+ 
+
+  **warning** (sim_deck:41) Unable to find referenced node out; Output variable ignored. Specify a valid node.
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  circuit element summary tnom=  25.000 temp=  25.000 *****
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+  vin  in                0                  0.000e+00  0.000e+00  0.000e+00 pulse
+             initial value   0.000e+00
+             pulsed value.   5.000e-02
+             delay time...   1.000e-09
+             risetime.....   5.000e-10
+             falltime.....   5.000e-10
+             width........   5.000e-09
+             period.......   2.000e-08
+
+  vvdd  vdd               0                  5.000e-02  0.000e+00  0.000e+00 dc   
+
+
+ **** mosfets
+
+
+ **** BSIM3v3 Model (Level49 or Level53)
+  
+  
+                                              
+ element name        0:mn0         0:mp0      
+ drain               0:vout        0:vout     
+ gate                0:vin         0:vin      
+ source              0:0           0:vcc!     
+ bulk                0:0           0:vcc!     
+ model               0:tsmc25dn    0:tsmc25dp 
+ w eff             4.757e-07     9.050e-07    
+ l eff             2.012e-07     1.926e-07    
+ rd eff            0.000e+00     0.000e+00    
+ rs eff            0.000e+00     0.000e+00    
+ cdsat             0.000e+00     0.000e+00    
+ cssat             0.000e+00     0.000e+00    
+ capbd             1.512e-15     2.230e-15    
+ capbs             1.512e-15     2.230e-15    
+ temp              2.500e+01     2.500e+01    
+ aic                                          
+ nf                1.000e+00     1.000e+00    
+ sa                0.000e+00     0.000e+00    
+ sb                0.000e+00     0.000e+00    
+ sd                0.000e+00     0.000e+00    
+ saeff             0.000e+00     0.000e+00    
+ sbeff             0.000e+00     0.000e+00    
+ mulu0             1.000e+00     1.000e+00    
+ mulua             1.000e+00     1.000e+00    
+ mulub             1.000e+00     1.000e+00    
+  
+  
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  element node table
+ **warning**  No DC path to ground from node        0:vin              defined in subckt 0               ; Connected by HSPICE with gdcpath
+
+
+
+ **warning** the following singular supplies were terminated to 1 meg resistor 
+   supply       node1            node2
+  vin                     0:in               defined in subckt 0                     0:0                defined in subckt 0               
+  vvdd                    0:vdd              defined in subckt 0                     0:0                defined in subckt 0               
+                                                                                      
+ 0                vin              vvdd             mn0:s            mn0:b            
+ in               vin                                                                 
+ vcc!             mp0:s            mp0:b                                              
+ vdd              vvdd                                                                
+ vin              mn0:g            mp0:g                                              
+ vout             mn0:d            mp0:d                                              
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 5         bypass  = 2         
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  temperature-adjusted values tnom=  25.000 temp=  25.000 *****
+
+ constants  - temp             kt               vt               gapsi            ni
+            2.981e+02        4.116e-21        2.569e-02        1.115e+00        1.256e+16      
+
+ *** resistors
+    name        eff val        eff val(ac)
+
+
+
+ *** mosfet element parameters
+ name             rd eff           rs eff           cdsat            cssat              vto                beta
+
+
+        0:mn0               0.000e+00        0.000e+00        0.000e+00        0.000e+00        4.449e-01        8.531e-04      
+        0:mp0               0.000e+00        0.000e+00        0.000e+00        0.000e+00       -5.934e-01        7.066e-04      
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is   0.000e+00
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:in      = 0.000e+00 0:vcc!    =-2.289e-33 0:vdd     = 5.000e-02
+ +0:vin     = 0.000e+00 0:vout    =-2.289e-33
+
+
+ **** voltage sources
+
+ subckt                        
+ element  0:vin      0:vvdd    
+  volts    0.000e+00  5.000e-02
+  current  0.000e+00 -5.000e-08
+  power    0.000e+00  2.500e-09
+
+     total voltage source power dissipation=  2.500e-09       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                        
+ element  0:mn0      0:mp0     
+ model    0:tsmc25dn 0:tsmc25dp
+ region       Cutoff     Cutoff
+  id      -5.009e-43  3.218e-56
+  ibs      0.000e+00  0.000e+00
+  ibd      0.000e+00  0.000e+00
+  vgs      0.000e+00  2.289e-33
+  vds     -2.289e-33  8.861e-47
+  vbs      0.000e+00  0.000e+00
+  vth      5.399e-01 -5.003e-01
+  vdsat    4.354e-02 -3.916e-02
+  vod     -5.399e-01  5.003e-01
+  beta     5.719e-04  3.842e-04
+  gam eff  3.574e-01  3.622e-01
+  gm       1.090e-41  8.110e-55
+  gds      2.189e-10  3.632e-10
+  gmb      2.093e-42  2.502e-55
+  cdtot    1.853e-15  2.818e-15
+  cgtot    8.178e-16  1.450e-15
+  cstot    1.853e-15  2.818e-15
+  cbtot    3.154e-15  4.725e-15
+  cgs      3.415e-16  5.871e-16
+  cgd      3.436e-16  5.931e-16
+
+
+
+ ******  
+ 
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+  **warning** (sim_deck:41) .MEASURE  tphl never reached the trigger value, Measurement failed!
+  **warning** (sim_deck:41) .MEASURE  tphl never reached the target value, Measurement failed!
+  **warning** (sim_deck:41) Target event is undefined. Please specify a valid event. Measure failed.
+ istatic=-5.0000e-08  from= 0.0000e+00     to= 5.0000e-10
+ static=-2.5000e-09
+  **warning** (sim_deck:56) Trigger event is undefined. Please specify a valid event. Measure failed.
+   idynamic= failed                         measure parameter failed
+   dynamic= failed                         measure parameter failed
+   resultint= failed                         measure parameter failed
+   energy= failed                         measure parameter failed
+
+          ***** job concluded
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E3-1240 V2 @ 3.40GHz
+ cpu MHz	: 2000.000
+  
+ OS:
+ Linux version 2.6.32-431.1.2.0.1.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org
+ ) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) ) #1 SMP Fri Dec 13 13:06
+ :13 UTC 2013
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       6 # elements   =       6
+  # resistors   =       2 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       2 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1          21
+  transient          0.00        2001          98          49 rev=         8
+  readin             0.00
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         95.70 megabytes
+           total cpu time            0.01 seconds
+           total elapsed time        0.37 seconds
+           job started at     11:34:05 01/24/2014
+           job ended   at     11:34:05 01/24/2014
+
+
+ lic: Release hspice token(s) 

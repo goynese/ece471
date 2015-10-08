@@ -1,0 +1,77 @@
+
+Running simulation in directory: "/nfs/stak/students/g/goynese/ECE471/cadence/LVS".
+
+
+
+Begin netlist:    Feb 22 19:45:14 2014
+	view name list	= ("auLvs" "extracted" "schematic")
+	stop name list	= ("auLvs")
+	library name	= "ECE471"
+	cell name	= "fulladder"
+	view name	= "extracted"
+	globals lib	= "basic"
+Running Artist Flat Netlisting ...
+End netlist:    Feb 22 19:45:14 2014
+
+Moving original netlist to extNetlist
+Removing parasitic components from netlist
+	presistors removed:  0
+	pcapacitors removed: 7
+	pinductors removed:  0
+	pdiodes removed:     0
+	trans lines removed: 0
+	21 nodes merged into 21 nodes
+
+
+Begin netlist:    Feb 22 19:45:14 2014
+	view name list	= ("auLvs" "schematic")
+	stop name list	= ("auLvs")
+	library name	= "ECE471"
+	cell name	= "fulladder"
+	view name	= "schematic"
+	globals lib	= "basic"
+Running Artist Flat Netlisting ...
+End netlist:    Feb 22 19:45:14 2014
+
+Moving original netlist to extNetlist
+Removing parasitic components from netlist
+	presistors removed:  0
+	pcapacitors removed: 0
+	pinductors removed:  0
+	pdiodes removed:     0
+	trans lines removed: 0
+	21 nodes merged into 21 nodes
+
+Running netlist comparison program:  LVS
+Begin comparison:    Feb 22 19:45:14 2014
+@(#)$CDS: LVS.exe version 5.1.0 12/16/2007 23:30 (cicln04) $
+
+1 net-list ambiguity was resolved by random selection.
+
+The net-lists failed to match.
+
+			     layout  schematic
+				instances
+	un-matched		13	12
+	rewired			2	0
+	size errors		0	0
+	pruned			0	0
+	active			28	28
+	total			28	28
+
+				  nets
+	un-matched		14	12
+	merged			0	0
+	pruned			0	0
+	active			21	19
+	total			21	19
+
+				terminals
+	un-matched		6	6
+	matched but
+	different type		0	0
+	total			6	7
+End comparison:      Feb 22 19:45:14 2014
+
+
+Comparison program completed successfully.

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      goynese
+HostName                       dear119-20.engr.oregonstate.edu
+ProcessIdentifier              6027
+ProcessCreationTime_UTC        1395096918
+ProcessCreationTime_Readable   Mon Mar 17 15:55:18 2014 PDT
+AppIdentifier                  /usr/local/apps/cadence/IC5141/tools/dfII/bin/icfb.exe
+OSType                         lnx86
+ReasonForPlacingEditLock       XXsave write lock
+FilePathUsedToEditLock         /nfs/stak/students/g/goynese/ECE471/cadence/ECE471/Decoder/schematic/sch.cdb
+TimeEditLocked                 Mon Mar 17 16:45:09 2014 PDT

@@ -1,0 +1,20 @@
+T /+6 S /gnd
+? Terminal "S" on device /+6 should be connected to /11 instead of /gnd
+T /+5 S /gnd
+? Terminal "S" on device /+5 should be connected to /11 instead of /gnd
+T /+6 S /gnd
+? Terminal "S" on device /+6 should be connected to /gnd instead of /11
+T /+5 S /gnd
+? Terminal "S" on device /+5 should be connected to /gnd instead of /11
+T -1  a /a
+? Terminal a in the layout failed to match any terminal in the schematic.
+T -1  b /b
+? Terminal b in the layout failed to match any terminal in the schematic.
+T -1  c_in /c_in
+? Terminal c_in in the layout failed to match any terminal in the schematic.
+T -1  c_out /c_out
+? Terminal c_out in the layout failed to match any terminal in the schematic.
+T -1  gnd /gnd
+? Terminal gnd in the layout is not present in the schematic.
+T -1  vdd /vdd
+? Terminal vdd in the layout is not present in the schematic.

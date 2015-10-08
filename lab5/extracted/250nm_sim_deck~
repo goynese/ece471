@@ -1,0 +1,118 @@
+
+* Power Supply Voltage
+* Voltage_Node_Name 'NODE_VDD' 'GROUND' 'VARIABLE_SUPPLY'
+* 'sup' is a variable you set to adjust the supply voltage
+
+Vvdd vdd 0 'sup'
+Vgnd gnd 0 0
+
+* Value of the power supply. 2.5V(0.25um); 1.8V(0.18um); 1.2V(0.13um); 1.0V(90nm, 65nm); 0.9V(32nm)
+.param sup=2.5
+.param supinv=-2.5
+
+* Include the netlist into the simulation
+* For example, 'inverter_sch.spi' (inverter schematic)
+* For example, 'inverter_lay.spi' (inverter layout)
+* You MUST get rid of the .end statement
+.include './extracted_fulladder.spi'
+
+* The format for the transistor is:
+* TRANSISTOR_NAME DRAIN GATE SOURCE BULK
+* P_18_MM refers to 0.18um-PMOS device; P_18_MM=>NMOS 
+* L=length; W=width; AD=Area of Drain; AS=Area of Source; PD=Perimeter of Drain; PS=Perimeter of source; 
+* M=multiplier, # of transistors in parallel
+
+* Input pulse into the inverter
+* Adjust the rise/fall times if simulating faster processes
+* Voltage pulse to drive in the input of the inverter with a square wave signal
+* Vin=voltage_node_name; 'in'=positive terminal; '0'=negative terminal (0 is always GROUND)
+* pulse=>defines a pulse-type waveform
+* (0 'sup' is 0->1 transition
+* 1ns is delay at which 0->1 transition occurs
+* 200p => rise_time (0 to 100%)
+* 200p => fall_time (100% to 0%)
+* 5n   => period of the waveform
+
+*
+*INPUTs 
+
+Vin a 0 pulse(0 'sup' 1n 200p 200p 5n)
+Vin2 b 0 pulse(0 'sup' 3n 200p 200p 5n)
+Vin3 c_in 0 pulse(0 'sup' 5n 200p 200p 5n)
+
+
+
+.measure tran tplh TRIG v(a) val='sup/2' fall=1
++                   TARG v(s) val='sup/2' rise=1
+
+
+
+
+* you will need to add some more of these yourself to measure trise,tfall,power_avg
+* This measure statements will help you AUTOMATICALLY determine the tphl (high-to-low propagation speed)
+* and tplh 
+
+*.measure tran tphl TRIG v(in_a) val='sup/2' rise=1
+*+                   TARG v(out) val='sup/2' fall=1
+
+*.measure tran tplh TRIG v(in_b) val='sup/2' fall=1
+*+                   TARG v(out) val='sup/2' rise=1
+
+*.measure tran tfall TRIG v(out) val='sup*.9' fall=1
+*+                   TARG v(out) val='sup*.1' fall=1
+
+*.measure tran trise TRIG v(out) val='sup*.1' rise=1
+*+                   TARG v(out) val='sup*.9' rise=1
+
+*fine static power
+*.measure tran istatic avg I(Vvdd) FROM = 0ns TO = .5ns
+*.measure pstatic param = 'istatic * sup'
+
+*find dynamic
+*.measure tran start_dyn TRIG AT = 0ns
+*+    TARG V(out) VAL = 'sup*.1' RISE = 1
+
+*.measure tran stop_dyn TRIG AT = 0ns
+*+    TARG V(out) VAL = 'sup*.9' RISE = 1
+
+*.measure tran idyn avg I(Vvdd) FROM = 'start_dyn' TO = 'stop_dyn'
+*.measure pdyn param = 'idyn * sup'
+
+*find energy
+*.measure tran charge INTEG I(Vvdd) FROM = 'start_dyn' TO = 'stop_dyn' 
+*.measure energy param = 'charge*sup'
+
+
+* This isn't exact.  please modify
+*.measure tran iavg I(vdd) start=2ns finish=7ns
+* add some of your measures trise/tfall, 
+
+
+* Add these files if simulating 0.25um technology 
+  
+.lib "/nfs/guille/u1/c/cdsmgr/cdsmgr/pdk/CDK1.4/local/models/hspice/public/publicModel/tsmc25dN" NMOS 
+.lib "/nfs/guille/u1/c/cdsmgr/cdsmgr/pdk/CDK1.4/local/models/hspice/public/publicModel/tsmc25dP" PMOS 
+
+* Add these files if simulation 0.18um technology
+* .include '130nm_process_TT.lib
+* Where 'TT" is using the typical NMOS, PMOS device corners
+*.lib "/nfs/farm/u4/p/postmaja/ece471/ECE472/18um_hspiceFiles/MM180_REG18_V122.lib" TT
+
+* Add these files if simulation 0.13um technology
+* .include '130nm_process_TT.lib
+
+* Add these files if simulation 0.32um technology
+*.include "./32nm_process_TT.lib"
+
+* Simulation control statements
+.options list node post
++ accurate
+
+* 10ps=minimum time step; 20ns=duration of the transient simulation
+.tran 10p 20n
+
+
+* Allows you to sweep a dc voltage parameter
+*.dc
+
+.end 

@@ -1,0 +1,24 @@
+#
+ECE471 or symbol
+I4
+#
+ECE471 and symbol
+I5
+I3
+I2
+#
+ECE471 xor symbol
+I6
+I1
+I0
+#ISCELL
+basic ipin symbol
+PIN2
+PIN1
+PIN0
+#ISCELL
+basic opin symbol
+PIN6
+PIN5
+PIN4
+PIN3

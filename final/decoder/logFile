@@ -1,0 +1,24 @@
+header
+"PSFversion" "1.00" 
+"simulator" "HSPICE"
+"version" "F-2011.09-SP2 32-BIT" 
+"rundate" "16:22:32 03/17/2014 " 
+"runtitle" "                                                                  " 
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"summary" "analysisInst" ( 
+"Summary Information"
+"sim_deck.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

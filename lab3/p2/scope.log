@@ -1,0 +1,13 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/lab3/p2/sim_deck.tr0 1 openonly
+# PF:1
+pf:read PF:1 v(in)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 v(vout)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel

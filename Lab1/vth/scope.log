@@ -1,0 +1,21 @@
+Mdi:Resize 843 661
+Mdi:Move 5 5
+Graph:Select Graph0
+Graph:DSel 0
+Mdi:Resize 883 661
+Mdi:Move 5 5
+Graph:DSel 0
+Graph:DSel
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/Lab1/vth/NMOS.sw0 1 openonly
+# PF:1
+pf:read PF:1 i(vds)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+Mdi:ArrangeIcons
+wm geometry . 900x785+2+111
+wm geometry .sigmgr 376x204+518+216
+wm geometry .sigmgr._PF:1 231x341+962+626

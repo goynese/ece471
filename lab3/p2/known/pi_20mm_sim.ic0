@@ -1,0 +1,18 @@
+* "simulator" "HSPICE" 
+* "version" "F-2011.09-SP2 32-BIT"
+* "format" "HSP"
+* "rundate" "18:00:23 01/31/2014 "
+* "netlist" "pi_20mm_sim "
+* "runtitle" ""
+* time =  0.000e+00       
+* temperature =  2.500e+01       
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000e-12       
+.nodeset
++ in = 0.000e+00       
++ net06 = 2.500e+00       
++ net6 = 2.500e+00       
++ out = 3.328e-08       
++ vdd = 2.500e+00       
+***   END: Saved Operating Point ***                     

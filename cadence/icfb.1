@@ -1,0 +1,66 @@
+#!/bin/csh -f
+
+# Wrapper script for Cadence tools. 
+# silva@ece.orst.edu - 1/19/2001
+
+# This prevents the script from going into a loop (Can happen 
+# if someone invokes it directly, instead of using the links)
+#
+if ( $?WRAP_Recurse ) then
+   echo "Error: cdsWrapper invoked recursively - aborted"
+   exit 1
+endif
+
+# Get program
+set program=`basename $0`
+
+# Installation directory (for temporary use)
+set CDS_INST_DIR=/usr/local/apps/cadence/
+
+# fix for RH ES3. shechter, 041504
+#setenv LD_ASSUME_KERNEL 2.4.1
+
+# Add path for dfII tools
+#set path=($CDS_INST_DIR/current/tools/bin $CDS_INST_DIR/current/tools/dfII/bin $path)
+
+# Use old version of cadence - Jacob
+set path=($CDS_INST_DIR/IC5141/tools/bin $CDS_INST_DIR/IC5141/tools/dfII/bin $path)
+
+# Add path for mmsim62 (spectre)
+# shechter 5/29/08
+set path=($CDS_INST_DIR/spectre/current/tools/bin $path)
+
+# Add path for IC Craftsman
+#set path=($path $CDS_INST_DIR/ICC11241/tools/iccraft/bin)
+
+# Add path for Verilog tools
+set path=($path $CDS_INST_DIR/LDV41/tools/bin)
+
+# added for ic610
+if ($?LD_LIBRARY_PATH) then
+	setenv LD_LIBRARY_PATH /usr/local/apps/cadence/current/tools/inca/lib:${LD_LIBRARY_PATH}
+else
+	setenv LD_LIBRARY_PATH /usr/local/apps/cadence/current/tools/inca/lib
+endif
+
+# Set Cadence variables
+setenv CDS_LIC_FILE /nfs/guille/a1/authcodes/cadence/license.dat
+setenv CDS_Netlisting_Mode Analog
+
+# Remove CDS_INST_DIR. Tools are installed in different hierarchies,
+# and this variable causes Cadence to get confused.
+unset CDS_INST_DIR
+
+# Set the dummy environment variable to help trap accidental
+# recursive infinite loops.
+setenv WRAP_Recurse 1
+
+# Run the command:
+if ($program == "ic_craft")then
+   echo Starting IC Craftsman, please wait...
+   exec sbtool.exe $*
+else
+   echo Starting $program, please wait...
+   exec $program $* 
+endif 
+

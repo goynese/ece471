@@ -1,0 +1,32 @@
+# ;==========================================================================
+# ;
+# ; $Id: cds.lib,v 1.4 2003/05/30 17:04:29 gma2 Exp $
+# ; 
+# ; Revision History
+# ;
+# ; $Log: cds.lib,v $
+# ; Revision 1.4  2003/05/30 17:04:29  gma2
+# ; removed SOFTINCLUDE cmosx_new_names.lib
+# ;
+# ; Revision 1.3  2000/11/28 20:55:56  awglaser
+# ; removed lib definitions and includes that no longer exist
+# ;
+# ; Revision 1.2  1999/02/03 18:50:05  jtschaff
+# ; removed SOFTINCLUDE pcb.lib
+# ;
+# ; Revision 1.1  1997/12/18 20:01:31  astanas
+# ; Initial revision
+# ;
+# ;
+# ;--------------------------------------------------------------------------
+
+# See 1-10 of Conversion Manual
+# command    library name        library location
+
+# The following modified by Jifeng Han, 01/14/2005
+# Modified by Jim Le, 01/30/2005
+
+INCLUDE ~cdsmgr/cdsmgr/process/CDK1.4/ncsu.lib
+DEFINE NCSU_TechLib_tsmc03d ~cdsmgr/cdsmgr/pdk/CDK1.4/local/lib/NCSU_TechLib_tsmc03d
+ 
+DEFINE ECE471 /nfs/stak/students/g/goynese/ECE471/cadence/ECE471

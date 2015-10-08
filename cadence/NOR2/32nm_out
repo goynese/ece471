@@ -1,0 +1,823 @@
+Using: /usr/local/apps/synopsys/current_hspice/hspice/linux/hspice 32nm_sim_deck
+ ****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+  Copyright (C) 2011 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: 32nm_sim_deck                                                     
+  Command line options: 32nm_sim_deck
+ lic:  
+ lic: FLEXlm: v10.8 
+ lic: USER:   goynese              HOSTNAME: dear119-11.engr.oregonstate.edu 
+ lic: HOSTID: 7446a09dad6e         PID:      27869 
+ lic: Using FLEXlm license file: 
+ lic: 7188@license.eecs.oregonstate.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 11-aug-2014/2013.03 
+ lic: 25(in_use)/50(total) FLOATING license(s) on SERVER license.eecs.oregonstat
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/current_hspice/hspice/meta.cfg
+
+ **warning**  runlvl smaller than 5, reset to 5  when accurate turned on
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+
+ **warning**  runlvl smaller than 5, reset to 5  when accurate turned on
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+     0:sup                                                     = 900.0000m      
+     0:tphl                                                    =   0.           
+     0:tplh                                                    =   0.           
+     0:istatic                                                 =   0.           
+     0:pstatic                                                 =   0.           
+     0:start_dyn                                               =   0.           
+     0:stop_dyn                                                =   0.           
+     0:idyn                                                    =   0.           
+     0:pdyn                                                    =   0.           
+     0:charge                                                  =   0.           
+     0:energy                                                  =   0.           
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            298.15000    4.1163e-21    25.69184m     1.11562    1.2565e+16 
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  mos   model parameters tnom=  25.000 temp=  25.000 *****
+ Model Name: nmos  
+ BSIM4 Model (Level 54)
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 1.15e-09 
+    TOXE = 1.15e-09 
+    TOXP =  9e-10 
+    TOXM = 1.15e-09 
+    DTOX = 2.5e-10 
+    EPSROX =    3.9 
+    CDSC =      0 
+    CDSCB =      0 
+    CDSCD =      0 
+    CIT =      0 
+    NFACTOR =  2.508 
+    XJ =  1e-08 
+    VSAT = 2.1e+05 
+    A0 =      1 
+    AGS =      0 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+04 
+    KETA =   0.04 
+    NSUB =  6e+16 
+    NDEP = 4.12e+18 
+    NSD =  2e+20 
+    NGATE =  1e+23 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-07 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =      0 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 =  1e-11 
+    DVTP1 =    0.1 
+    W0 = 2.5e-06 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 =      0 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =    0.5 
+    DSUB =    0.1 
+    VTH0 =  0.466 
+    EU =   1.67 
+    UA =  6e-10 
+    UA1 = 4.31e-09 
+    UB = 1.2e-18 
+    UB1 = 7.61e-18 
+    UC =      0 
+    UC1 = -5.6e-11 
+    U0 =   0.05 
+    UTE =   -1.5 
+    VOFF =  -0.13 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.01 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+06 
+    DELTA =   0.01 
+    RDSW =    150 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =     75 
+    RSW =     75 
+    PRWG =      0 
+    PRWB =      0 
+    PRT =      0 
+    ETA0 = 0.0048 
+    ETAB =      0 
+    PCLM =   0.02 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = -0.005 
+    PSCBE1 = 8.14e+08 
+    PSCBE2 =  1e-07 
+    PVAG =  1e-20 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL = -1.4e-08 
+    XLREF = -1.4e-08 
+    B0 =      0 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+09 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC = 0.02001 
+    BIGC = 0.002743 
+    CIGC =  0.002 
+    AIGSD = 0.02001 
+    BIGSD = 0.002743 
+    CIGSD =  0.002 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =  -0.55 
+    GBMIN =  1e-10 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-10 
+    CGDL = 2.653e-10 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.287e-10 
+    CLC =  1e-07 
+    CLE =    0.6 
+    DWC =  5e-09 
+    DLC = 2.7e-09 
+    DLCIG = 2.7e-09 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL =  2e-06 
+    SW =  2e-06 
+    K =      0 
+    TNOM =  300.1 
+    CGSO = 8.5e-11 
+    CGDO = 8.5e-11 
+    CGBO = 2.56e-11 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS =  1e-11 
+    JSWGS =  1e-10 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS =  5e-10 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS =  3e-10 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD =  1e-11 
+    JSWGD =  1e-10 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD =  5e-10 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD =  5e-10 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT = 2.7e-09 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT =  5e-09 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.25e+41 
+    NOIB = 3.125e+26 
+    NOIC = 8.75e+09 
+    EM = 4.1e+07 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+ Model Name: pmos  
+ BSIM4 Model (Level 54)
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 1.2e-09 
+    TOXE = 1.2e-09 
+    TOXP =  9e-10 
+    TOXM = 1.2e-09 
+    DTOX =  3e-10 
+    EPSROX =    3.9 
+    CDSC =      0 
+    CDSCB =      0 
+    CDSCD =      0 
+    CIT =      0 
+    NFACTOR =    2.1 
+    XJ =  1e-08 
+    VSAT = 1.8e+05 
+    A0 =      1 
+    AGS =  1e-20 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+04 
+    KETA = -0.047 
+    NSUB =  6e+16 
+    NDEP = 3.07e+18 
+    NSD =  2e+20 
+    NGATE =  1e+23 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-07 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =  -0.01 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 =  1e-11 
+    DVTP1 =   0.05 
+    W0 = 2.5e-06 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 = -0.032 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =   0.56 
+    DSUB =    0.1 
+    VTH0 = -0.435 
+    EU =      1 
+    UA =  2e-09 
+    UA1 = 4.31e-09 
+    UB =  5e-19 
+    UB1 = 7.61e-18 
+    UC =      0 
+    UC1 = -5.6e-11 
+    U0 =  0.014 
+    UTE =   -1.5 
+    VOFF = -0.126 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.08 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+06 
+    DELTA =   0.01 
+    RDSW =    150 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =     75 
+    RSW =     75 
+    PRWG =      0 
+    PRWB =      0 
+    PRT =      0 
+    ETA0 = 0.0048 
+    ETAB =      0 
+    PCLM =   0.12 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = 3.4e-08 
+    PSCBE1 = 8.14e+08 
+    PSCBE2 = 9.58e-07 
+    PVAG =  1e-20 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL = -1.4e-08 
+    XLREF = -1.4e-08 
+    B0 =      0 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+09 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC = 0.02001 
+    BIGC = 0.002743 
+    CIGC =  0.002 
+    AIGSD = 0.02001 
+    BIGSD = 0.002743 
+    CIGSD =  0.002 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =   0.55 
+    GBMIN =  1e-10 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-10 
+    CGDL = 2.653e-10 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.278e-10 
+    CLC =  1e-07 
+    CLE =    0.6 
+    DWC =  5e-09 
+    DLC = 2.7e-09 
+    DLCIG = 2.7e-09 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL =  2e-06 
+    SW =  2e-06 
+    K =      0 
+    TNOM =  300.1 
+    CGSO = 8.5e-11 
+    CGDO = 8.5e-11 
+    CGBO = 2.56e-11 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS =  1e-11 
+    JSWGS =  1e-10 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS =  5e-10 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS =  3e-10 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD =  1e-11 
+    JSWGD =  1e-10 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD =  5e-10 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD =  5e-10 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT = 2.7e-09 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT =  5e-09 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.188e+40 
+    NOIB = 1.5e+25 
+    NOIC = 8.75e+09 
+    EM = 4.1e+07 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+  **warning** (32nm_sim_deck:7) Both nodes of element vgnd are connected together; Line ignored.
+  **info** (32nm_sim_deck:38) DC voltage reset to initial transient source value              in source        0:vin                 new dc=  0.0000D+00
+ **warning**(nmos:mn3)Warning:  Acde = 0.263957 may be too small in BSIM4 model with w=6.4e-08 l=3.2e-08.
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  circuit element summary tnom=  25.000 temp=  25.000 *****
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+  v0  in_a              net45                0.         0.         0.      dc   
+  v1  in_b              net43                0.         0.         0.      dc   
+  v2  in_a              net41                0.         0.         0.      dc   
+  v3  in_b              net39                0.         0.         0.      dc   
+  vin  in_a              0                    0.         0.         0.      pulse
+             initial value     0.     
+             pulsed value.   900.0000m
+             delay time...     1.0000n
+             risetime.....   200.0000p
+             falltime.....   200.0000p
+             width........     5.0000n
+             period.......    20.0000n
+
+  vin2  in_b              0                    0.         0.         0.      pulse
+             initial value     0.     
+             pulsed value.   900.0000m
+             delay time...     3.0000n
+             risetime.....   200.0000p
+             falltime.....   200.0000p
+             width........     5.0000n
+             period.......    20.0000n
+
+  vvdd  vdd!              0                  900.0000m    0.         0.      dc   
+
+
+ **** mosfets
+
+
+ **** BSIM4 Model (Level 54)
+  
+  
+                                                              
+ element name        0:mn3      0:mn2      0:mn1      0:mn0   
+ drain               0:net10    0:net10    0:out      0:out   
+ gate                0:out      0:out      0:net39    0:net41 
+ source              0:0        0:0        0:0        0:0     
+ bulk                0:0        0:0        0:0        0:0     
+ model               0:nmos     0:nmos     0:nmos     0:nmos  
+ w eff              54.0000n   54.0000n   54.0000n   54.0000n 
+ l eff              12.6000n   12.6000n   12.6000n   12.6000n 
+ rd eff              0.         0.         0.         0.      
+ rs eff              0.         0.         0.         0.      
+ cdsat               6.1193a    6.1193a    6.1193a    6.1193a 
+ cssat               6.1193a    6.1193a    6.1193a    6.1193a 
+ capbd             114.3309a  114.3309a  114.3309a  114.3309a 
+ capbs             101.5565a  101.5565a  101.5565a  101.5565a 
+ temp               25.0000    25.0000    25.0000    25.0000  
+ aic                                                          
+ nf                  1.0000     1.0000     1.0000     1.0000  
+ min                 0.         0.         0.         0.      
+ rbdb               15.0000    15.0000    15.0000    15.0000  
+ rbsb               15.0000    15.0000    15.0000    15.0000  
+ rbpb                5.0000     5.0000     5.0000     5.0000  
+ rbps               15.0000    15.0000    15.0000    15.0000  
+ rbpd               15.0000    15.0000    15.0000    15.0000  
+ trnqsmod            0.         0.         0.         0.      
+ acnqsmod            0.         0.         0.         0.      
+ rbodymod            1.0000     1.0000     1.0000     1.0000  
+ rgatemod            1.0000     1.0000     1.0000     1.0000  
+ geomod              1.0000     1.0000     1.0000     1.0000  
+ rgeomod             0.         0.         0.         0.      
+ delvto              0.         0.         0.         0.      
+ mulu0               1.0000     1.0000     1.0000     1.0000  
+ delk1               0.         0.         0.         0.      
+ delnfct             0.         0.         0.         0.      
+ deltox              0.         0.         0.         0.      
+ sa                  0.         0.         0.         0.      
+ sb                  0.         0.         0.         0.      
+ sd                  0.         0.         0.         0.      
+ saeff               0.         0.         0.         0.      
+ sbeff               0.         0.         0.         0.      
+  
+  
+                                                              
+ element name        0:mp2      0:mp1      0:mp0      0:mp3   
+ drain               0:net37    0:out      0:net29    0:net10 
+ gate                0:out      0:net43    0:net45    0:out   
+ source              0:vdd!     0:net29    0:vdd!     0:net37 
+ bulk                0:vdd!     0:vdd!     0:vdd!     0:vdd!  
+ model               0:pmos     0:pmos     0:pmos     0:pmos  
+ w eff             118.0000n  118.0000n  118.0000n  118.0000n 
+ l eff              12.6000n   12.6000n   12.6000n   12.6000n 
+ rd eff              0.         0.         0.         0.      
+ rs eff              0.         0.         0.         0.      
+ cdsat              11.0884a   11.0884a   11.0884a   11.0884a 
+ cssat              11.0884a   11.0884a   11.0884a   11.0884a 
+ capbd             148.8218a  148.8218a  148.8218a  148.8218a 
+ capbs             123.2730a  123.2730a  123.2730a  123.2730a 
+ temp               25.0000    25.0000    25.0000    25.0000  
+ aic                                                          
+ nf                  1.0000     1.0000     1.0000     1.0000  
+ min                 0.         0.         0.         0.      
+ rbdb               15.0000    15.0000    15.0000    15.0000  
+ rbsb               15.0000    15.0000    15.0000    15.0000  
+ rbpb                5.0000     5.0000     5.0000     5.0000  
+ rbps               15.0000    15.0000    15.0000    15.0000  
+ rbpd               15.0000    15.0000    15.0000    15.0000  
+ trnqsmod            0.         0.         0.         0.      
+ acnqsmod            0.         0.         0.         0.      
+ rbodymod            1.0000     1.0000     1.0000     1.0000  
+ rgatemod            1.0000     1.0000     1.0000     1.0000  
+ geomod              1.0000     1.0000     1.0000     1.0000  
+ rgeomod             0.         0.         0.         0.      
+ delvto              0.         0.         0.         0.      
+ mulu0               1.0000     1.0000     1.0000     1.0000  
+ delk1               0.         0.         0.         0.      
+ delnfct             0.         0.         0.         0.      
+ deltox              0.         0.         0.         0.      
+ sa                  0.         0.         0.         0.      
+ sb                  0.         0.         0.         0.      
+ sd                  0.         0.         0.         0.      
+ saeff               0.         0.         0.         0.      
+ sbeff               0.         0.         0.         0.      
+  
+  
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  element node table
+                                                                                      
+ 0                vin              vin2             vvdd             mn3:s            
+                  mn3:b            mn2:s            mn2:b            mn1:s            
+                  mn1:b            mn0:s            mn0:b                             
+ in_a             v0               v2               vin                               
+ in_b             v1               v3               vin2                              
+ net10            mn3:d            mn2:d            mp3:d                             
+ net29            mp1:s            mp0:d                                              
+ net37            mp2:d            mp3:s                                              
+ net39            v3               mn1:g                                              
+ net41            v2               mn0:g                                              
+ net43            v1               mp1:g                                              
+ net45            v0               mp0:g                                              
+ out              mn3:g            mn2:g            mn1:d            mn0:d            
+                  mp2:g            mp1:d            mp3:g                             
+ vdd!             vvdd             mp2:s            mp2:b            mp1:b            
+                  mp0:s            mp0:b            mp3:b                             
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 5         bypass  = 2         
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is voltage   simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:in_a    =   0.      0:in_b    =   0.      0:net10   = 186.1453n
+ +0:net29   = 899.9644m 0:net37   = 774.6224m 0:net39   =   0.     
+ +0:net41   =   0.      0:net43   =   0.      0:net45   =   0.     
+ +0:out     = 899.9288m 0:vdd!    = 900.0000m
+
+ ******  
+ 
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+ tphl=  20.9865p  targ=   1.1210n   trig=   1.1000n
+ tplh=  22.0944p  targ=   8.3221n   trig=   8.3000n
+ istatic= -11.3367n  from=   0.          to= 500.0000p
+ pstatic= -10.2030n
+ start_dyn=   8.2882n  targ=   8.2882n   trig=   0.     
+ stop_dyn=   8.3466n  targ=   8.3466n   trig=   0.     
+ idyn= -13.9392u  from=   8.2882n     to=   8.3466n
+ pdyn= -12.5453u
+ charge=-814.9415a  from=   8.2882n     to=   8.3466n
+ energy=-733.4473a
+
+          ***** job concluded
+1****** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******               
+ ******  
+ 
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E3-1240 V2 @ 3.40GHz
+ cpu MHz	: 3401.000
+  
+ OS:
+ Linux version 2.6.32-431.1.2.0.1.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org
+ ) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) ) #1 SMP Fri Dec 13 13:06
+ :13 UTC 2013
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      44 # elements   =      15
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       7
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       8 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           8
+  transient          0.02        2001         586         219 rev=        42
+  readin             0.00
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         95.81 megabytes
+           total cpu time            0.03 seconds
+           total elapsed time        0.39 seconds
+           job started at     13:39:54 01/31/2014
+           job ended   at     13:39:54 01/31/2014
+
+
+ lic: Release hspice token(s) 

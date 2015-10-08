@@ -1,0 +1,13 @@
+***** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******
+ Input File: sim_deck
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   goynese              HOSTNAME: dear119-15.engr.oregonstate.edu
+ lic: HOSTID: 7446a09dad99         PID:      26852
+ lic: Using FLEXlm license file:
+ lic: 7188@license.eecs.oregonstate.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 11-aug-2014/2013.03
+ lic: 3(in_use)/50(total) FLOATING license(s) on SERVER license.eecs.oregonstate
+ lic:
+ lic: Release hspice token(s)

@@ -1,0 +1,231 @@
+Mdi:ArrangeIcons
+wm geometry . 900x785+1+86
+Mdi:ArrangeIcons
+wm geometry . 900x785+4+84
+Mdi:ArrangeIcons
+wm geometry . 900x785+8+82
+Mdi:ArrangeIcons
+wm geometry . 900x785+9+81
+Mdi:ArrangeIcons
+wm geometry . 900x785+10+80
+Mdi:ArrangeIcons
+wm geometry . 900x785+11+79
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/Lab1/sim_deck.mt0 1 openonly
+# PF:1
+Mdi:Resize 770 643
+Mdi:Move 5 5
+wm geometry .sigmgr 376x204+530+183
+wm geometry .sigmgr 376x204+535+184
+wm geometry .sigmgr 376x204+544+186
+wm geometry .sigmgr 376x204+558+189
+wm geometry .sigmgr 376x204+573+192
+wm geometry .sigmgr 376x204+588+197
+wm geometry .sigmgr 376x204+609+199
+wm geometry .sigmgr 376x204+632+202
+wm geometry .sigmgr 376x204+655+204
+wm geometry .sigmgr 376x204+676+206
+wm geometry .sigmgr 376x204+697+206
+wm geometry .sigmgr 376x204+716+208
+wm geometry .sigmgr 376x204+731+208
+wm geometry .sigmgr 376x204+742+208
+wm geometry .sigmgr 376x204+746+208
+wm geometry .sigmgr 376x204+748+208
+wm geometry .sigmgr 376x204+749+208
+wm geometry .sigmgr 376x204+751+208
+wm geometry .sigmgr 376x204+754+207
+wm geometry .sigmgr 376x204+756+206
+wm geometry .sigmgr 376x204+758+205
+wm geometry .sigmgr 376x204+760+204
+wm geometry .sigmgr 376x204+761+204
+wm geometry .sigmgr 376x204+762+203
+wm geometry .sigmgr 376x204+765+201
+wm geometry .sigmgr 376x204+767+200
+wm geometry .sigmgr 376x204+770+198
+wm geometry .sigmgr 376x204+778+194
+wm geometry .sigmgr 376x204+785+190
+wm geometry .sigmgr 376x204+793+185
+wm geometry .sigmgr 376x204+803+181
+wm geometry .sigmgr 376x204+810+177
+wm geometry .sigmgr 376x204+816+175
+wm geometry .sigmgr 376x204+820+174
+wm geometry .sigmgr 376x204+824+173
+wm geometry .sigmgr 376x204+826+173
+wm geometry .sigmgr 376x204+828+172
+wm geometry .sigmgr 376x204+829+172
+wm geometry .sigmgr 376x204+832+171
+wm geometry .sigmgr 376x204+833+171
+wm geometry .sigmgr 376x204+836+170
+wm geometry .sigmgr 376x204+838+170
+wm geometry .sigmgr 376x204+841+170
+wm geometry .sigmgr 376x204+844+169
+wm geometry .sigmgr 376x204+848+169
+wm geometry .sigmgr 376x204+851+168
+wm geometry .sigmgr 376x204+854+168
+wm geometry .sigmgr 376x204+857+167
+wm geometry .sigmgr 376x204+858+167
+wm geometry .sigmgr 376x204+859+167
+wm geometry .sigmgr 376x204+860+167
+wm geometry .sigmgr 376x204+861+167
+wm geometry .sigmgr 376x204+862+166
+wm geometry .sigmgr 376x204+863+166
+wm geometry .sigmgr 376x204+865+165
+wm geometry .sigmgr 376x204+867+164
+wm geometry .sigmgr 376x204+868+164
+wm geometry .sigmgr 376x204+869+164
+wm geometry .sigmgr 376x204+870+163
+ScopeSigMgr:Unload 0 {{(1) sim_deck.mt0}}
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/Lab1/sim_deck.tr0 1 openonly
+# PF:2
+GrXY:NewGraph
+# Graph1
+pf:read PF:2 v(in)
+# WF:2:1
+Graph addsignal WF:2:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:2 v(out)
+# WF:2:2
+Graph addsignal WF:2:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+Mdi:Resize 735 639
+Mdi:Move 5 5
+wm geometry .sigmgr 376x204+868+163
+wm geometry .sigmgr 376x204+864+163
+wm geometry .sigmgr 376x204+857+163
+wm geometry .sigmgr 376x204+842+163
+wm geometry .sigmgr 376x204+821+163
+wm geometry .sigmgr 376x204+794+163
+wm geometry .sigmgr 376x204+765+163
+wm geometry .sigmgr 376x204+728+163
+wm geometry .sigmgr 376x204+691+163
+wm geometry .sigmgr 376x204+654+163
+wm geometry .sigmgr 376x204+617+163
+wm geometry .sigmgr 376x204+582+163
+wm geometry .sigmgr 376x204+551+163
+wm geometry .sigmgr 376x204+535+163
+wm geometry .sigmgr 376x204+499+163
+wm geometry .sigmgr 376x204+478+165
+wm geometry .sigmgr 376x204+463+167
+wm geometry .sigmgr 376x204+452+169
+wm geometry .sigmgr 376x204+441+172
+wm geometry .sigmgr 376x204+436+172
+wm geometry .sigmgr 376x204+432+174
+wm geometry .sigmgr 376x204+428+176
+wm geometry .sigmgr 376x204+423+178
+wm geometry .sigmgr 376x204+415+181
+wm geometry .sigmgr 376x204+402+184
+wm geometry .sigmgr 376x204+389+185
+wm geometry .sigmgr 376x204+372+187
+wm geometry .sigmgr 376x204+353+190
+wm geometry .sigmgr 376x204+334+192
+wm geometry .sigmgr 376x204+315+194
+wm geometry .sigmgr 376x204+296+196
+wm geometry .sigmgr 376x204+275+199
+wm geometry .sigmgr 376x204+254+202
+wm geometry .sigmgr 376x204+239+204
+wm geometry .sigmgr 376x204+226+204
+wm geometry .sigmgr 376x204+217+207
+wm geometry .sigmgr 376x204+215+207
+wm geometry .sigmgr 376x204+214+208
+wm geometry .sigmgr._PF:2 231x341+959+600
+wm geometry .sigmgr._PF:2 231x341+958+600
+wm geometry .sigmgr._PF:2 231x341+956+600
+wm geometry .sigmgr._PF:2 231x341+953+599
+wm geometry .sigmgr._PF:2 231x341+948+599
+wm geometry .sigmgr._PF:2 231x341+939+597
+wm geometry .sigmgr._PF:2 231x341+921+594
+wm geometry .sigmgr._PF:2 231x341+915+592
+wm geometry .sigmgr._PF:2 231x341+879+590
+wm geometry .sigmgr._PF:2 231x341+856+588
+wm geometry .sigmgr._PF:2 231x341+833+588
+wm geometry .sigmgr._PF:2 231x341+810+586
+wm geometry .sigmgr._PF:2 231x341+787+586
+wm geometry .sigmgr._PF:2 231x341+764+586
+wm geometry .sigmgr._PF:2 231x341+741+586
+wm geometry .sigmgr._PF:2 231x341+726+586
+wm geometry .sigmgr._PF:2 231x341+705+586
+wm geometry .sigmgr._PF:2 231x341+694+586
+wm geometry .sigmgr._PF:2 231x341+685+586
+wm geometry .sigmgr._PF:2 231x341+680+588
+wm geometry .sigmgr._PF:2 231x341+680+590
+wm geometry .sigmgr._PF:2 231x341+680+592
+wm geometry .sigmgr._PF:2 231x341+680+593
+wm geometry .sigmgr._PF:2 231x341+680+595
+wm geometry .sigmgr._PF:2 231x341+680+597
+wm geometry .sigmgr._PF:2 231x341+680+599
+wm geometry .sigmgr._PF:2 231x341+663+603
+wm geometry .sigmgr._PF:2 231x341+661+605
+wm geometry .sigmgr._PF:2 231x341+658+608
+wm geometry .sigmgr._PF:2 231x341+656+611
+wm geometry .sigmgr._PF:2 231x341+655+612
+wm geometry .sigmgr._PF:2 231x341+655+613
+wm geometry .sigmgr._PF:2 231x341+655+614
+wm geometry .sigmgr._PF:2 231x341+657+616
+wm geometry .sigmgr._PF:2 231x341+659+617
+wm geometry .sigmgr._PF:2 231x341+662+618
+wm geometry .sigmgr._PF:2 231x341+665+619
+wm geometry .sigmgr._PF:2 231x341+667+619
+wm geometry .sigmgr._PF:2 231x341+670+619
+wm geometry .sigmgr._PF:2 231x341+672+619
+wm geometry .sigmgr._PF:2 231x341+674+619
+wm geometry .sigmgr._PF:2 231x341+677+619
+wm geometry .sigmgr._PF:2 231x341+681+619
+wm geometry .sigmgr._PF:2 231x341+685+619
+wm geometry .sigmgr._PF:2 231x341+690+617
+wm geometry .sigmgr._PF:2 231x341+697+615
+wm geometry .sigmgr._PF:2 231x341+702+613
+wm geometry .sigmgr._PF:2 231x341+708+612
+wm geometry .sigmgr._PF:2 231x341+711+610
+wm geometry .sigmgr._PF:2 231x341+712+610
+wm geometry .sigmgr._PF:2 231x341+713+609
+wm geometry .sigmgr._PF:2 231x341+715+608
+wm geometry .sigmgr 376x204+215+207
+wm geometry .sigmgr 376x204+218+205
+wm geometry .sigmgr 376x204+219+205
+wm geometry .sigmgr 376x204+220+204
+wm geometry .sigmgr 376x204+221+204
+wm geometry .sigmgr 376x204+224+204
+wm geometry .sigmgr 376x204+227+203
+wm geometry .sigmgr 376x204+230+202
+wm geometry .sigmgr 376x204+235+201
+wm geometry .sigmgr 376x204+245+200
+wm geometry .sigmgr 376x204+257+198
+wm geometry .sigmgr 376x204+274+196
+wm geometry .sigmgr 376x204+293+193
+wm geometry .sigmgr 376x204+314+190
+wm geometry .sigmgr 376x204+335+185
+wm geometry .sigmgr 376x204+356+180
+wm geometry .sigmgr 376x204+379+175
+wm geometry .sigmgr 376x204+398+170
+wm geometry .sigmgr 376x204+417+165
+wm geometry .sigmgr 376x204+436+163
+wm geometry .sigmgr 376x204+455+160
+wm geometry .sigmgr 376x204+470+158
+wm geometry .sigmgr 376x204+483+156
+wm geometry .sigmgr 376x204+496+153
+wm geometry .sigmgr 376x204+503+151
+wm geometry .sigmgr 376x204+510+149
+wm geometry .sigmgr 376x204+514+148
+wm geometry .sigmgr 376x204+519+146
+wm geometry .sigmgr 376x204+523+144
+wm geometry .sigmgr 376x204+531+141
+wm geometry .sigmgr 376x204+540+138
+wm geometry .sigmgr 376x204+549+135
+wm geometry .sigmgr 376x204+558+131
+wm geometry .sigmgr 376x204+566+129
+wm geometry .sigmgr 376x204+575+126
+wm geometry .sigmgr 376x204+583+124
+wm geometry .sigmgr 376x204+591+122
+wm geometry .sigmgr 376x204+597+121
+wm geometry .sigmgr 376x204+601+119
+wm geometry .sigmgr 376x204+605+117
+wm geometry .sigmgr 376x204+606+116
+wm geometry .sigmgr 376x204+607+116
+wm geometry .sigmgr 376x204+609+115
+wm geometry .sigmgr 376x204+610+115
+wm geometry .sigmgr 376x204+611+114
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:Select Graph1

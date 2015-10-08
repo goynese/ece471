@@ -1,0 +1,639 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/final/decoder/sim_deck.tr0 1 openonly
+# PF:1
+wm geometry .sigmgr._PF:1 233x343+960+600
+wm geometry .sigmgr._PF:1 240x356+960+600
+wm geometry .sigmgr._PF:1 250x366+960+600
+wm geometry .sigmgr._PF:1 264x387+960+600
+wm geometry .sigmgr._PF:1 290x412+960+600
+wm geometry .sigmgr._PF:1 316x441+960+600
+wm geometry .sigmgr._PF:1 339x472+960+600
+wm geometry .sigmgr._PF:1 360x507+960+600
+wm geometry .sigmgr._PF:1 366x515+960+600
+wm geometry .sigmgr._PF:1 370x519+960+600
+wm geometry .sigmgr._PF:1 372x519+960+600
+wm geometry .sigmgr._PF:1 369x518+960+600
+wm geometry .sigmgr._PF:1 364x513+960+600
+wm geometry .sigmgr._PF:1 353x507+960+600
+wm geometry .sigmgr._PF:1 343x505+960+600
+wm geometry .sigmgr._PF:1 333x505+960+600
+wm geometry .sigmgr._PF:1 315x505+960+600
+wm geometry .sigmgr._PF:1 293x505+960+600
+wm geometry .sigmgr._PF:1 282x505+960+600
+wm geometry .sigmgr._PF:1 280x504+960+600
+wm geometry .sigmgr._PF:1 276x501+960+600
+wm geometry .sigmgr._PF:1 271x481+960+600
+wm geometry .sigmgr._PF:1 270x462+960+600
+wm geometry .sigmgr._PF:1 272x450+960+600
+wm geometry .sigmgr._PF:1 275x437+960+600
+wm geometry .sigmgr._PF:1 277x430+960+600
+wm geometry .sigmgr._PF:1 276x429+960+600
+wm geometry .sigmgr._PF:1 250x436+960+600
+wm geometry .sigmgr._PF:1 217x448+960+600
+wm geometry .sigmgr._PF:1 209x452+960+600
+wm geometry .sigmgr._PF:1 210x456+960+600
+wm geometry .sigmgr._PF:1 214x465+960+600
+wm geometry .sigmgr._PF:1 219x470+960+600
+wm geometry .sigmgr._PF:1 225x472+960+600
+wm geometry .sigmgr._PF:1 226x471+960+600
+wm geometry .sigmgr._PF:1 226x469+960+600
+wm geometry .sigmgr._PF:1 226x469+960+599
+wm geometry .sigmgr._PF:1 226x469+960+598
+wm geometry .sigmgr._PF:1 226x469+960+594
+wm geometry .sigmgr._PF:1 226x469+960+590
+wm geometry .sigmgr._PF:1 226x469+960+583
+wm geometry .sigmgr._PF:1 226x469+960+575
+wm geometry .sigmgr._PF:1 226x469+960+566
+wm geometry .sigmgr._PF:1 226x469+960+556
+wm geometry .sigmgr._PF:1 226x469+960+544
+wm geometry .sigmgr._PF:1 226x469+960+532
+wm geometry .sigmgr._PF:1 226x469+958+517
+wm geometry .sigmgr._PF:1 226x469+956+502
+wm geometry .sigmgr._PF:1 226x469+954+488
+wm geometry .sigmgr._PF:1 226x469+952+475
+wm geometry .sigmgr._PF:1 226x469+950+461
+wm geometry .sigmgr._PF:1 226x469+948+449
+wm geometry .sigmgr._PF:1 226x469+948+437
+wm geometry .sigmgr._PF:1 226x469+946+424
+wm geometry .sigmgr._PF:1 226x469+944+411
+wm geometry .sigmgr._PF:1 226x469+944+398
+wm geometry .sigmgr._PF:1 226x469+942+387
+wm geometry .sigmgr._PF:1 226x469+942+376
+wm geometry .sigmgr._PF:1 226x469+940+365
+wm geometry .sigmgr._PF:1 226x469+940+354
+wm geometry .sigmgr._PF:1 226x469+940+343
+wm geometry .sigmgr._PF:1 226x469+940+332
+wm geometry .sigmgr._PF:1 226x469+940+321
+wm geometry .sigmgr._PF:1 226x469+940+310
+wm geometry .sigmgr._PF:1 226x469+940+299
+wm geometry .sigmgr._PF:1 226x469+938+288
+wm geometry .sigmgr._PF:1 226x469+936+278
+wm geometry .sigmgr._PF:1 226x469+934+267
+wm geometry .sigmgr._PF:1 226x469+932+256
+wm geometry .sigmgr._PF:1 226x469+932+246
+wm geometry .sigmgr._PF:1 226x469+930+237
+wm geometry .sigmgr._PF:1 226x469+928+228
+wm geometry .sigmgr._PF:1 226x469+925+220
+wm geometry .sigmgr._PF:1 226x469+924+211
+wm geometry .sigmgr._PF:1 226x469+922+203
+wm geometry .sigmgr._PF:1 226x469+919+194
+wm geometry .sigmgr._PF:1 226x469+917+188
+wm geometry .sigmgr._PF:1 226x469+915+181
+wm geometry .sigmgr._PF:1 226x469+912+175
+wm geometry .sigmgr._PF:1 226x469+911+170
+wm geometry .sigmgr._PF:1 226x469+909+166
+wm geometry .sigmgr._PF:1 226x469+907+162
+wm geometry .sigmgr._PF:1 226x469+907+158
+wm geometry .sigmgr._PF:1 226x469+906+152
+wm geometry .sigmgr._PF:1 226x469+906+148
+wm geometry .sigmgr._PF:1 226x469+906+143
+wm geometry .sigmgr._PF:1 226x469+906+137
+wm geometry .sigmgr._PF:1 226x469+904+133
+wm geometry .sigmgr._PF:1 226x469+904+130
+wm geometry .sigmgr._PF:1 226x469+904+129
+wm geometry .sigmgr._PF:1 226x469+904+128
+wm geometry .sigmgr._PF:1 226x469+904+127
+wm geometry .sigmgr._PF:1 226x469+905+126
+wm geometry .sigmgr._PF:1 226x469+906+126
+wm geometry .sigmgr._PF:1 226x469+908+126
+wm geometry .sigmgr._PF:1 226x469+909+126
+wm geometry .sigmgr._PF:1 226x469+911+128
+wm geometry .sigmgr._PF:1 226x469+913+129
+wm geometry .sigmgr._PF:1 226x469+914+130
+wm geometry .sigmgr._PF:1 226x469+917+133
+wm geometry .sigmgr._PF:1 226x469+919+135
+wm geometry .sigmgr._PF:1 226x469+921+139
+wm geometry .sigmgr._PF:1 226x469+922+143
+wm geometry .sigmgr._PF:1 226x469+926+150
+wm geometry .sigmgr._PF:1 226x469+927+157
+wm geometry .sigmgr._PF:1 226x469+930+164
+wm geometry .sigmgr._PF:1 226x469+932+171
+wm geometry .sigmgr._PF:1 226x469+934+178
+wm geometry .sigmgr._PF:1 226x469+937+186
+wm geometry .sigmgr._PF:1 226x469+939+193
+wm geometry .sigmgr._PF:1 226x469+939+201
+wm geometry .sigmgr._PF:1 226x469+940+207
+wm geometry .sigmgr._PF:1 226x469+940+213
+wm geometry .sigmgr._PF:1 226x469+940+217
+pf:read PF:1 v(0)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 v(1)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+pf:read PF:1 v(10)
+# WF:1:3
+Graph addsignal WF:1:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal2
+pf:read PF:1 v(11)
+# WF:1:4
+Graph addsignal WF:1:4 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal3
+pf:read PF:1 v(12)
+# WF:1:5
+Graph addsignal WF:1:5 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal4
+Mdi:Resize 541 662
+Mdi:Move 5 5
+pf:read PF:1 v(s0)
+# WF:1:6
+Graph addsignal WF:1:6 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal5
+pf:read PF:1 v(s1)
+# WF:1:7
+Graph addsignal WF:1:7 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal6
+pf:read PF:1 v(s2)
+# WF:1:8
+Graph addsignal WF:1:8 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal7
+pf:read PF:1 v(s3)
+# WF:1:9
+Graph addsignal WF:1:9 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal8
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal9
+pf:read PF:1 v(16)
+# WF:1:11
+Graph addsignal WF:1:11 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal10
+pf:read PF:1 v(14)
+# WF:1:12
+Graph addsignal WF:1:12 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal11
+pf:read PF:1 v(13)
+# WF:1:13
+Graph addsignal WF:1:13 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal12
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal13
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal14
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal15
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal16
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal17
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal18
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal19
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal20
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal21
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal22
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal23
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal24
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal25
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal26
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal27
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal28
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal29
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal30
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal31
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal32
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal33
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal34
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal35
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal36
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal37
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal38
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal39
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal40
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal41
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal42
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal43
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal44
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal45
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal46
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal47
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal48
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal49
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal50
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal51
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal52
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal53
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal54
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal55
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal56
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal57
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal58
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal59
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal60
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal61
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal62
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal63
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal64
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal65
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal66
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal67
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal68
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal69
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal70
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal71
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal72
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal73
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal74
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal75
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal76
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal77
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal78
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal79
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal80
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal81
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal82
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal83
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal84
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal85
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal86
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal87
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal88
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal89
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal90
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal91
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal92
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal93
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal94
+pf:read PF:1 v(15)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal95
+pf:read PF:1 v(10)
+# WF:1:3
+Graph addsignal WF:1:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal96
+pf:read PF:1 v(10)
+# WF:1:3
+Graph addsignal WF:1:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal97
+pf:read PF:1 i(v3)
+# WF:1:14
+Graph addsignal WF:1:14 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal98
+pf:read PF:1 i(v5)
+# WF:1:15
+Graph addsignal WF:1:15 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal99
+pf:read PF:1 i(v5)
+# WF:1:15
+Graph addsignal WF:1:15 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal100
+pf:read PF:1 {xi31;v(net47)}
+# WF:1:16
+Graph addsignal WF:1:16 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal101
+pf:read PF:1 {xi31;v(net44)}
+# WF:1:17
+Graph addsignal WF:1:17 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal102
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal103
+pf:read PF:1 {xi31;v(net47)}
+# WF:1:16
+Graph addsignal WF:1:16 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal104
+pf:read PF:1 {xi31;v(net68)}
+# WF:1:19
+Graph addsignal WF:1:19 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal105
+pf:read PF:1 {xi31;v(net59)}
+# WF:1:20
+Graph addsignal WF:1:20 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal106
+pf:read PF:1 {xi31;v(net47)}
+# WF:1:16
+Graph addsignal WF:1:16 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal107
+pf:read PF:1 {xi31;v(net44)}
+# WF:1:17
+Graph addsignal WF:1:17 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal108
+pf:read PF:1 {xi31;v(net47)}
+# WF:1:16
+Graph addsignal WF:1:16 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal109
+pf:read PF:1 {xi31;v(net47)}
+# WF:1:16
+Graph addsignal WF:1:16 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal110
+pf:read PF:1 {xi31;v(net44)}
+# WF:1:17
+Graph addsignal WF:1:17 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal111
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal112
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal113
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal114
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal115
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal116
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal117
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal118
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal119
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal120
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal121
+pf:read PF:1 {xi31;v(net37)}
+# WF:1:18
+Graph addsignal WF:1:18 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal122
+pf:read PF:1 {xi31;v(net47)}
+# WF:1:16
+Graph addsignal WF:1:16 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal123
+pf:read PF:1 {xi31;v(net59)}
+# WF:1:20
+Graph addsignal WF:1:20 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal124
+pf:read PF:1 {xi31;v(net59)}
+# WF:1:20
+Graph addsignal WF:1:20 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal125
+pf:read PF:1 {xi31;v(net59)}
+# WF:1:20
+Graph addsignal WF:1:20 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal126
+pf:read PF:1 {xi31;v(net59)}
+# WF:1:20
+Graph addsignal WF:1:20 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal127
+pf:read PF:1 {xi31;v(net59)}
+# WF:1:20
+Graph addsignal WF:1:20 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal128
+pf:read PF:1 {xi31;v(net59)}
+# WF:1:20
+Graph addsignal WF:1:20 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal129
+ScopeSigMgr:Unload 0 {{(1) sim_deck.tr0}}

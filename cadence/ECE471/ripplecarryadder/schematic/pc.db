@@ -1,0 +1,38 @@
+#
+NCSU_Digital_Parts Dlatch symbol
+I8
+I9
+#
+NCSU_Digital_Parts DFF symbol
+I7
+I6
+I5
+#
+ECE471 fulladder symbol
+I3
+I2
+I1
+I0
+#ISCELL
+basic ipin symbol
+PIN14
+PIN8
+PIN7
+PIN6
+PIN5
+PIN4
+PIN3
+PIN2
+PIN1
+PIN0
+#ISCELL
+basic opin symbol
+PIN16
+PIN15
+PIN13
+PIN12
+PIN10
+PIN11
+#ISCELL
+basic iopin symbolr
+PIN9

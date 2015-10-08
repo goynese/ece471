@@ -1,0 +1,48 @@
+#
+ECE471 inverter2 symbol
+I35
+I34
+I33
+I32
+#
+NCSU_Digital_Parts and4 symbol
+I31
+I30
+I29
+I28
+I20
+I19
+I18
+I17
+I16
+I21
+I22
+I27
+I26
+I25
+I24
+I23
+#ISCELL
+basic ipin symbol
+PIN3
+PIN2
+PIN1
+PIN0
+#ISCELL
+basic opin symbol
+PIN19
+PIN18
+PIN17
+PIN16
+PIN15
+PIN14
+PIN13
+PIN12
+PIN11
+PIN10
+PIN9
+PIN8
+PIN6
+PIN5
+PIN4
+PIN7

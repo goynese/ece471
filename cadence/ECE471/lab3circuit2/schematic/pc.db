@@ -1,0 +1,23 @@
+#
+NCSU_Analog_Parts res symbol
+R0
+#
+NCSU_Analog_Parts cap symbol
+C3
+C0
+#
+ECE471 inverter2 symbol
+I1
+I0
+#ISCELL
+basic ipin symbol
+PIN0
+#ISCELL
+basic opin symbol
+PIN1
+#ISCELL
+NCSU_Analog_Parts gnd symbol
+I2
+#ISCELL
+NCSU_Analog_Parts vdd symbol
+I3

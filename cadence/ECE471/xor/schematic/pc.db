@@ -1,0 +1,17 @@
+#
+ECE471 inverter symbol
+I3
+#
+ECE471 or symbol
+I1
+#
+ECE471 and symbol
+I2
+I0
+#ISCELL
+basic ipin symbol
+PIN1
+PIN0
+#ISCELL
+basic opin symbol
+PIN2

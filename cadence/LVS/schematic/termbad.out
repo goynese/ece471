@@ -1,0 +1,12 @@
+T -1  a /A
+? Terminal a in the schematic failed to match any terminal in the layout.
+T -1  b /B
+? Terminal b in the schematic failed to match any terminal in the layout.
+T -1  c_in /C_IN
+? Terminal c_in in the schematic failed to match any terminal in the layout.
+T -1  c_out /c_out
+? Terminal c_out in the schematic failed to match any terminal in the layout.
+T -1  s /s
+? Terminal s in the schematic is not present in the layout.
+T -1  vdd! /vdd!
+? Terminal vdd! in the schematic is not present in the layout.

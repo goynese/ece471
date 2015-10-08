@@ -1,0 +1,26 @@
+* "simulator" "HSPICE" 
+* "version" "F-2011.09-SP2 32-BIT"
+* "format" "HSP"
+* "rundate" "13:51:34 01/31/2014 "
+* "netlist" "nor2_250nm_sim_deck "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ in_a =  33.3333m       
++ in_b =  33.3333m       
++ net10 =   0.            
++ net29 =   0.            
++ net37 =   0.            
++ net39 = -16.6667m       
++ net41 = -16.6667m       
++ net43 = -16.6667m       
++ net45 = -16.6667m       
++ out =   0.            
++ vdd =   2.5000        
++ vdd! =   0.            
+***   END: Saved Operating Point ***                     

@@ -1,0 +1,3 @@
+***This is the netlist for an inverter in HSPICE***
+
+MN0 vd vg gnd gnd TSMC25Dn L=0.24u W=480n

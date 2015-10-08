@@ -1,0 +1,46 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/lab3/sim_deck_layout.tr0 1 openonly
+# PF:1
+pf:read PF:1 v(in)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 v(out)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+wm geometry .sigmgr._PF:1 231x341+959+600
+wm geometry .sigmgr._PF:1 231x341+954+602
+wm geometry .sigmgr._PF:1 231x341+939+603
+wm geometry .sigmgr._PF:1 231x341+920+603
+wm geometry .sigmgr._PF:1 231x341+904+606
+wm geometry .sigmgr._PF:1 231x341+880+606
+wm geometry .sigmgr._PF:1 231x341+861+608
+wm geometry .sigmgr._PF:1 231x341+842+610
+wm geometry .sigmgr._PF:1 231x341+825+612
+wm geometry .sigmgr._PF:1 231x341+808+612
+wm geometry .sigmgr._PF:1 231x341+795+614
+wm geometry .sigmgr._PF:1 231x341+786+614
+wm geometry .sigmgr._PF:1 231x341+777+614
+wm geometry .sigmgr._PF:1 231x341+776+614
+wm geometry .sigmgr._PF:1 231x341+775+614
+wm geometry .sigmgr._PF:1 231x341+774+615
+wm geometry .sigmgr._PF:1 231x341+772+613
+wm geometry .sigmgr._PF:1 231x341+761+608
+wm geometry .sigmgr._PF:1 231x341+744+601
+wm geometry .sigmgr._PF:1 231x341+727+594
+wm geometry .sigmgr._PF:1 231x341+706+585
+wm geometry .sigmgr._PF:1 231x341+681+576
+wm geometry .sigmgr._PF:1 231x341+669+565
+wm geometry .sigmgr._PF:1 231x341+627+558
+wm geometry .sigmgr._PF:1 231x341+596+541
+wm geometry .sigmgr._PF:1 231x341+567+528
+wm geometry .sigmgr._PF:1 231x341+536+515
+wm geometry .sigmgr._PF:1 231x341+509+502
+wm geometry .sigmgr._PF:1 231x341+486+493
+wm geometry .sigmgr._PF:1 231x341+465+486
+wm geometry .sigmgr._PF:1 231x341+446+479
+wm geometry .sigmgr._PF:1 231x341+429+474
+wm geometry .sigmgr._PF:1 231x341+416+469
+wm geometry .sigmgr._PF:1 231x341+407+467
+wm geometry .sigmgr._PF:1 231x341+405+467
+ScopeSigMgr:Unload 0 {{(1) sim_deck_layout.tr0}}

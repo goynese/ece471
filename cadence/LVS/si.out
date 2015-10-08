@@ -1,0 +1,141 @@
+@(#)$CDS: LVS.exe version 5.1.0 12/16/2007 23:30 (cicln04) $
+
+Command line: /nfs/guille/a2/rh80apps/cadence/IC5141/tools.lnx86/dfII/bin/32bit/LVS.exe -dir /nfs/stak/students/g/goynese/ECE471/cadence/LVS -l -s -f -t /nfs/stak/students/g/goynese/ECE471/cadence/LVS/layout /nfs/stak/students/g/goynese/ECE471/cadence/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Fixed device checking is enabled.
+Using terminal names as correspondence points.
+
+    Net-list summary for /nfs/stak/students/g/goynese/ECE471/cadence/LVS/layout/netlist
+       count
+	21		nets
+	6		terminals
+	14		pmos
+	14		nmos
+
+    Net-list summary for /nfs/stak/students/g/goynese/ECE471/cadence/LVS/schematic/netlist
+       count
+	19		nets
+	7		terminals
+	14		pmos
+	14		nmos
+
+
+    Terminal correspondence points
+    N13       N16       a
+    N11       N20       b
+    N12       N8        c_in
+    N5        N4        c_out
+
+Devices in the netlist but not in the rules:
+        pcapacitor
+Devices in the rules but not in the netlist:
+        res cap nfet pfet nmos4 pmos4
+
+    Ill-defined correspondence points.
+
+	N12	N8  Purged because neither is a subset of the other
+	N5	N4  Purged because neither is a subset of the other
+	N5	N4  Purged because neither is a subset of the other
+	N11	N20  Purged because neither is a subset of the other
+	N12	N8  Purged because neither is a subset of the other
+	N13	N16  Purged because neither is a subset of the other
+
+
+	Device summary for layout
+		   bad  total
+	pmos	     4     14
+	nmos	     8     14
+
+
+	Device summary for schematic
+		   bad  total
+	pmos	     4     14
+	nmos	     8     14
+
+1 net-list ambiguity was resolved by random selection.
+
+The net-lists failed to match.
+
+			     layout  schematic
+				instances
+	un-matched		13	12
+	rewired			2	0
+	size errors		0	0
+	pruned			0	0
+	active			28	28
+	total			28	28
+
+				  nets
+	un-matched		14	12
+	merged			0	0
+	pruned			0	0
+	active			21	19
+	total			21	19
+
+				terminals
+	un-matched		6	6
+	matched but
+	different type		0	0
+	total			6	7
+
+
+Probe files from /nfs/stak/students/g/goynese/ECE471/cadence/LVS/schematic
+
+devbad.out:
+The no. of lines exceeded than specified by the variable lvsLimitLinesInOutFile.
+To see the complete information please see the file:
+/nfs/stak/students/g/goynese/ECE471/cadence/LVS/schematic/devbad.out
+
+netbad.out:
+The no. of lines exceeded than specified by the variable lvsLimitLinesInOutFile.
+To see the complete information please see the file:
+/nfs/stak/students/g/goynese/ECE471/cadence/LVS/schematic/netbad.out
+
+mergenet.out:
+
+termbad.out:
+T -1  a /A
+? Terminal a in the schematic failed to match any terminal in the layout.
+T -1  b /B
+? Terminal b in the schematic failed to match any terminal in the layout.
+T -1  c_in /C_IN
+? Terminal c_in in the schematic failed to match any terminal in the layout.
+T -1  c_out /c_out
+? Terminal c_out in the schematic failed to match any terminal in the layout.
+T -1  s /s
+? Terminal s in the schematic is not present in the layout.
+T -1  vdd! /vdd!
+? Terminal vdd! in the schematic is not present in the layout.
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /nfs/stak/students/g/goynese/ECE471/cadence/LVS/layout
+
+devbad.out:
+The no. of lines exceeded than specified by the variable lvsLimitLinesInOutFile.
+To see the complete information please see the file:
+/nfs/stak/students/g/goynese/ECE471/cadence/LVS/layout/devbad.out
+
+netbad.out:
+The no. of lines exceeded than specified by the variable lvsLimitLinesInOutFile.
+To see the complete information please see the file:
+/nfs/stak/students/g/goynese/ECE471/cadence/LVS/layout/netbad.out
+
+mergenet.out:
+
+termbad.out:
+The no. of lines exceeded than specified by the variable lvsLimitLinesInOutFile.
+To see the complete information please see the file:
+/nfs/stak/students/g/goynese/ECE471/cadence/LVS/layout/termbad.out
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:

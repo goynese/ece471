@@ -1,0 +1,18 @@
+Mdi:ArrangeIcons
+Mdi:ArrangeIcons
+wm geometry . 900x785+12+62
+Mdi:ArrangeIcons
+wm geometry . 900x785+10+61
+Mdi:ArrangeIcons
+wm geometry . 900x785+8+60
+Mdi:ArrangeIcons
+wm geometry . 900x785+6+59
+Mdi:ArrangeIcons
+wm geometry . 900x785+4+58
+Mdi:ArrangeIcons
+wm geometry . 900x785+3+58
+Mdi:ArrangeIcons
+wm geometry . 900x785+2+57
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/Lab1/sim_deck.tr0 1 openonly
+# PF:1
+ScopeSigMgr:Unload 0 {{(1) sim_deck.tr0}}

@@ -1,0 +1,105 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/cadence/NOR2/nor2_250nm_sim_deck.tr0 1 openonly
+# PF:1
+pf:read PF:1 i(v0)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Mdi:Resize 778 661
+Mdi:Move 5 5
+pf:read PF:1 v(0)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+pf:read PF:1 v(in_a)
+# WF:1:3
+Graph addsignal WF:1:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal2
+pf:read PF:1 v(in_b)
+# WF:1:4
+Graph addsignal WF:1:4 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal3
+wm geometry .sigmgr._PF:1 231x341+960+598
+wm geometry .sigmgr._PF:1 231x341+959+596
+wm geometry .sigmgr._PF:1 231x341+959+594
+wm geometry .sigmgr._PF:1 231x341+959+593
+wm geometry .sigmgr._PF:1 231x341+959+591
+wm geometry .sigmgr._PF:1 231x341+959+590
+wm geometry .sigmgr._PF:1 231x341+959+588
+wm geometry .sigmgr._PF:1 231x341+959+587
+wm geometry .sigmgr._PF:1 231x341+959+586
+wm geometry .sigmgr._PF:1 231x341+959+584
+wm geometry .sigmgr._PF:1 231x341+959+582
+wm geometry .sigmgr._PF:1 231x341+959+580
+wm geometry .sigmgr._PF:1 231x341+959+578
+wm geometry .sigmgr._PF:1 231x341+959+575
+wm geometry .sigmgr._PF:1 231x341+959+573
+wm geometry .sigmgr._PF:1 231x341+959+570
+wm geometry .sigmgr._PF:1 231x341+958+566
+wm geometry .sigmgr._PF:1 231x341+958+562
+wm geometry .sigmgr._PF:1 231x341+957+558
+wm geometry .sigmgr._PF:1 231x341+956+552
+wm geometry .sigmgr._PF:1 231x341+954+543
+wm geometry .sigmgr._PF:1 231x341+954+534
+wm geometry .sigmgr._PF:1 231x341+953+525
+wm geometry .sigmgr._PF:1 231x341+953+517
+wm geometry .sigmgr._PF:1 231x341+951+504
+wm geometry .sigmgr._PF:1 231x341+949+492
+wm geometry .sigmgr._PF:1 231x341+948+481
+wm geometry .sigmgr._PF:1 231x341+946+469
+wm geometry .sigmgr._PF:1 231x341+946+457
+wm geometry .sigmgr._PF:1 231x341+944+445
+wm geometry .sigmgr._PF:1 231x341+942+434
+wm geometry .sigmgr._PF:1 231x341+940+424
+wm geometry .sigmgr._PF:1 231x341+938+413
+wm geometry .sigmgr._PF:1 231x341+935+402
+wm geometry .sigmgr._PF:1 231x341+933+391
+wm geometry .sigmgr._PF:1 231x341+930+380
+wm geometry .sigmgr._PF:1 231x341+928+377
+wm geometry .sigmgr._PF:1 231x341+926+377
+wm geometry .sigmgr._PF:1 231x341+924+358
+wm geometry .sigmgr._PF:1 231x341+923+354
+wm geometry .sigmgr._PF:1 231x341+921+352
+wm geometry .sigmgr._PF:1 231x341+920+349
+wm geometry .sigmgr._PF:1 231x341+920+348
+wm geometry .sigmgr._PF:1 231x341+920+346
+wm geometry .sigmgr._PF:1 231x341+919+345
+wm geometry .sigmgr._PF:1 231x341+919+344
+wm geometry .sigmgr._PF:1 231x341+918+343
+wm geometry .sigmgr._PF:1 231x341+918+342
+wm geometry .sigmgr._PF:1 231x341+918+341
+wm geometry .sigmgr._PF:1 231x341+918+339
+wm geometry .sigmgr._PF:1 231x341+917+338
+wm geometry .sigmgr._PF:1 231x341+916+336
+wm geometry .sigmgr._PF:1 231x341+915+335
+wm geometry .sigmgr._PF:1 231x341+915+334
+wm geometry .sigmgr._PF:1 231x341+914+333
+wm geometry .sigmgr._PF:1 231x341+914+332
+wm geometry .sigmgr._PF:1 231x341+913+331
+wm geometry .sigmgr._PF:1 231x341+913+330
+wm geometry .sigmgr._PF:1 231x341+913+329
+wm geometry .sigmgr._PF:1 231x341+913+328
+wm geometry .sigmgr._PF:1 231x341+914+326
+wm geometry .sigmgr._PF:1 231x341+916+324
+wm geometry .sigmgr._PF:1 231x341+917+323
+wm geometry .sigmgr._PF:1 231x341+918+322
+wm geometry .sigmgr._PF:1 231x341+920+321
+wm geometry .sigmgr._PF:1 231x341+921+320
+wm geometry .sigmgr._PF:1 231x341+922+319
+wm geometry .sigmgr._PF:1 231x341+923+318
+wm geometry .sigmgr._PF:1 231x341+924+317
+wm geometry .sigmgr._PF:1 231x341+924+316
+wm geometry .sigmgr._PF:1 231x341+923+314
+wm geometry .sigmgr._PF:1 231x341+922+314
+wm geometry .sigmgr._PF:1 231x341+921+313
+wm geometry .sigmgr._PF:1 231x341+920+313
+wm geometry .sigmgr._PF:1 231x341+919+313
+wm geometry .sigmgr._PF:1 231x341+918+312
+wm geometry .sigmgr._PF:1 231x341+917+312
+wm geometry .sigmgr._PF:1 231x341+916+311
+wm geometry .sigmgr._PF:1 231x341+915+311
+wm geometry .sigmgr._PF:1 231x341+914+311
+wm geometry .sigmgr._PF:1 231x341+913+310
+pf:read PF:1 v(out)
+# WF:1:5
+Graph addsignal WF:1:5 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal4

@@ -1,0 +1,465 @@
+Encapsulated PostScript|Encapsulated PostScript: \
+	:manufacturer=Adobe: \
+	:type=epsf: \
+	:resolution#300: \
+	:maximumPages#1: \
+	:paperSize="5x5 inches" 1500 1500: \
+	:paperSize="8x8 inches" 2400 2400: \
+	:paperSize="Unlimited" 72000 72000:
+
+owen237-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dowen237: \
+        :query=lpstat owen237: \
+        :remove=cancel owen237-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+owen237-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dowen237: \
+        :query=lpstat owen237: \
+        :remove=cancel owen237-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+dear208-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -ddear208: \
+        :query=lpstat dear208: \
+        :remove=cancel dear208-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+dear208-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -ddear208: \
+        :query=lpstat dear208: \
+        :remove=cancel dear208-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+dear211-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -ddear211: \
+        :query=lpstat dear211: \
+        :remove=cancel dear211-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+dear211-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -ddear211: \
+        :query=lpstat dear211: \
+        :remove=cancel dear211-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+dear222-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -ddear222: \
+        :query=lpstat dear222: \
+        :remove=cancel dear222-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+dear222-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -ddear222: \
+        :query=lpstat dear222: \
+        :remove=cancel dear222-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+kec1140-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec1140: \
+        :query=lpstat kec1140: \
+        :remove=cancel kec1140-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec1140-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec1140: \
+        :query=lpstat kec1140: \
+        :remove=cancel kec1140-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec1130-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec1130: \
+        :query=lpstat kec1130: \
+        :remove=cancel kec1130-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec1130-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec1130: \
+        :query=lpstat kec1130: \
+        :remove=cancel kec1130-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+
+kec1112-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec1112: \
+        :query=lpstat kec1112: \
+        :remove=cancel kec1112-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec1112-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec1112: \
+        :query=lpstat kec1112: \
+        :remove=cancel kec1112-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec2040-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec2040: \
+        :query=lpstat kec2040: \
+        :remove=cancel kec2040-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec2040-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec2040: \
+        :query=lpstat kec2040: \
+        :remove=cancel kec2040-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+kec2048-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec2048: \
+        :query=lpstat kec2048: \
+        :remove=cancel kec2048-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec2048-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec2048: \
+        :query=lpstat kec2048: \
+        :remove=cancel kec2048-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec2082-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec2082: \
+        :query=lpstat kec2082: \
+        :remove=cancel kec2082-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec2082-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec2082: \
+        :query=lpstat kec2082: \
+        :remove=cancel kec2082-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec2126-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec2126: \
+        :query=lpstat kec2126: \
+        :remove=cancel kec2126-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec2126-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec2126: \
+        :query=lpstat kec2126: \
+        :remove=cancel kec2126-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec2130-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec2130: \
+        :query=lpstat kec2130: \
+        :remove=cancel kec2130-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec2130-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec2130: \
+        :query=lpstat kec2130: \
+        :remove=cancel kec2130-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec2112-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec2112: \
+        :query=lpstat kec2112: \
+        :remove=cancel kec2112-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec2112-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec2112: \
+        :query=lpstat kec2112: \
+        :remove=cancel kec2112-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec3040-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec3040: \
+        :query=lpstat kec3040: \
+        :remove=cancel kec3040-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec3040-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec3040: \
+        :query=lpstat kec3040: \
+        :remove=cancel kec3040-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec3048-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec3048: \
+        :query=lpstat kec3048: \
+        :remove=cancel kec3048-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec3048-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec3048: \
+        :query=lpstat kec3048: \
+        :remove=cancel kec3048-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec3126-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec3126: \
+        :query=lpstat kec3126: \
+        :remove=cancel kec3126-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec3126-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec3126: \
+        :query=lpstat kec3126: \
+        :remove=cancel kec3126-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec3130-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec3130: \
+        :query=lpstat kec3130: \
+        :remove=cancel kec3130-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec3130-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec3130: \
+        :query=lpstat kec3130: \
+        :remove=cancel kec3130-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec3082-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec3082: \
+        :query=lpstat kec3082: \
+        :remove=cancel kec3082-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec3082-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec3082: \
+        :query=lpstat kec3082: \
+        :remove=cancel kec3082-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec3112-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec3112: \
+        :query=lpstat kec3112: \
+        :remove=cancel kec3112-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec3112-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec3112: \
+        :query=lpstat kec3112: \
+        :remove=cancel kec3112-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec4130-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec4130: \
+        :query=lpstat kec4130: \
+        :remove=cancel kec4130-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec4130-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec4130: \
+        :query=lpstat kec4130: \
+        :remove=cancel kec4130-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec4126-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec4126: \
+        :query=lpstat kec4126: \
+        :remove=cancel kec4126-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec4126-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec4126: \
+        :query=lpstat kec4126: \
+        :remove=cancel kec4126-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:
+
+
+kec4119-300|Generic 300 dpi Adobe PostScript Level 1 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript1: \
+        :spool=lp -dkec4119: \
+        :query=lpstat kec4119: \
+        :remove=cancel kec4119-$1: \
+        :resolution#300: \
+        :maximumPages#30: \
+        :paperSize="A" 2400 3150 75 75:
+
+kec4119-600|Generic 600 dpi Adobe PostScript Level 2 Plotter: \
+        :manufacturer=Adobe: \
+        :type=postscript2: \
+        :spool=lp -dkec4119: \
+        :query=lpstat kec4119: \
+        :remove=cancel kec4119-$1: \
+        :resolution#600: \
+        :maximumPages#30: \
+        :paperSize="A" 4810 6330 172 132:

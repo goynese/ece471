@@ -1,0 +1,14 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/lab3/p2/known/1mm_layout_sim_deck.tr0 1 openonly
+# PF:1
+pf:read PF:1 v(in)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 v(out)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+Mdi:ArrangeIcons
+wm geometry . 900x785+2+111
+wm geometry .sigmgr 376x204+518+216
+wm geometry .sigmgr._PF:1 231x341+962+626

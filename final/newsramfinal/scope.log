@@ -1,0 +1,189 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/final/newsramfinal/sim_deck.tr0 1 openonly
+# PF:1
+wm geometry .sigmgr._PF:1 231x339+960+602
+wm geometry .sigmgr._PF:1 231x360+960+581
+wm geometry .sigmgr._PF:1 231x451+960+490
+wm geometry .sigmgr._PF:1 231x611+960+330
+wm geometry .sigmgr._PF:1 231x756+960+185
+wm geometry .sigmgr._PF:1 231x885+960+56
+wm geometry .sigmgr._PF:1 231x916+960+25
+wm geometry .sigmgr._PF:1 231x915+960+25
+wm geometry .sigmgr._PF:1 231x926+960+25
+wm geometry .sigmgr._PF:1 231x988+960+25
+wm geometry .sigmgr._PF:1 231x1118+960+25
+wm geometry .sigmgr._PF:1 231x1120+960+25
+pf:read PF:1 v(enw)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 v(bit1)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect Signal1 add
+# Signal1
+Graph itemselect Signal1 rem
+Graph delsignal Signal1
+Graph:DSel
+pf:read PF:1 v(bit2)
+# WF:1:3
+Graph addsignal WF:1:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal2
+pf:read PF:1 v(bit3)
+# WF:1:4
+Graph addsignal WF:1:4 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal3
+Graph:Select Graph0
+Graph:DSel
+Graph axisconfig AxisX(0) -range {339.33n 283.47n}
+Graph:DSel
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0) AxisY(2,0)} -range {all all all all} -zoomed {0 0 0 0}
+Graph axisconfig AxisX(0) -range {326.1n -9.0186n}
+Graph axisconfig AxisX(0) -range {-663.65p 490.25n}
+Graph axisconfig AxisX(0) -range {490.25n -6.5429n}
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0) AxisY(2,0)} -range {all all all all} -zoomed {0 0 0 0}
+Graph axisconfig AxisX(0) -range {-199.78p 324.63n}
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0) AxisY(2,0)} -range {all all all all} -zoomed {0 0 0 0}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{3.5970888668328 -1.391478855454} {4.2097n 352.55n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{-1.1334494905081 3.7691084434634} {337.31n 6.8953n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{3.7691084434634 -1.2194592788234} {6.8953n 337.31n}}
+Graph:DSel
+pf:read PF:1 v(net207)
+# WF:1:5
+Graph addsignal WF:1:5 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal4
+pf:read PF:1 v(net0177)
+# WF:1:6
+Graph addsignal WF:1:6 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal5
+pf:read PF:1 v(pe)
+# WF:1:7
+Graph addsignal WF:1:7 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal6
+pf:read PF:1 v(s0)
+# WF:1:8
+Graph addsignal WF:1:8 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal7
+pf:read PF:1 v(s1)
+# WF:1:9
+Graph addsignal WF:1:9 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal8
+pf:read PF:1 v(s2)
+# WF:1:10
+Graph addsignal WF:1:10 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal9
+pf:read PF:1 v(s3)
+# WF:1:11
+Graph addsignal WF:1:11 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal10
+Mdi:ArrangeIcons
+wm geometry . 901x786+0+85
+Mdi:ArrangeIcons
+wm geometry . 902x785+0+85
+Mdi:ArrangeIcons
+wm geometry . 905x788+0+85
+Mdi:ArrangeIcons
+wm geometry . 908x820+0+85
+Mdi:ArrangeIcons
+wm geometry . 908x887+0+85
+Mdi:ArrangeIcons
+wm geometry . 918x975+0+85
+Mdi:ArrangeIcons
+wm geometry . 936x1031+0+85
+Mdi:ArrangeIcons
+wm geometry . 956x1031+0+85
+Mdi:ArrangeIcons
+wm geometry . 978x1031+0+85
+Mdi:ArrangeIcons
+wm geometry . 982x1031+0+85
+Mdi:Resize 530 903
+Mdi:Move 5 5
+Graph:Select Graph0
+Graph axisconfig AxisY(5,0) -range {1.425 -1.725 exact}
+Graph axisconfig AxisY(5,0) -range {3.0 -0.15 exact}
+wm geometry .sigmgr 376x204+517+189
+wm geometry .sigmgr 376x204+518+189
+wm geometry .sigmgr 376x204+519+189
+wm geometry .sigmgr 376x204+520+189
+wm geometry .sigmgr 376x204+521+189
+wm geometry .sigmgr 376x204+522+189
+wm geometry .sigmgr 376x204+524+189
+wm geometry .sigmgr 376x204+525+189
+wm geometry .sigmgr 376x204+527+189
+wm geometry .sigmgr 376x204+529+189
+wm geometry .sigmgr 376x204+530+189
+wm geometry .sigmgr 376x204+532+189
+wm geometry .sigmgr 376x204+535+189
+wm geometry .sigmgr 376x204+538+189
+wm geometry .sigmgr 376x204+541+189
+wm geometry .sigmgr 376x204+543+189
+wm geometry .sigmgr 376x204+547+189
+wm geometry .sigmgr 376x204+550+189
+wm geometry .sigmgr 376x204+553+189
+wm geometry .sigmgr 376x204+557+189
+wm geometry .sigmgr 376x204+561+190
+wm geometry .sigmgr 376x204+566+191
+wm geometry .sigmgr 376x204+574+193
+wm geometry .sigmgr 376x204+580+195
+wm geometry .sigmgr 376x204+580+196
+wm geometry .sigmgr 376x204+597+199
+wm geometry .sigmgr 376x204+604+200
+wm geometry .sigmgr 376x204+613+203
+wm geometry .sigmgr 376x204+623+205
+wm geometry .sigmgr 376x204+633+207
+wm geometry .sigmgr 376x204+642+210
+wm geometry .sigmgr 376x204+652+211
+wm geometry .sigmgr 376x204+659+213
+wm geometry .sigmgr 376x204+665+215
+wm geometry .sigmgr 376x204+671+217
+wm geometry .sigmgr 376x204+673+217
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect Signal3 add
+# Signal3
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{3.6349896079447 -1.5135420684566} {192.94n 271.02n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{4.1769403107238 -2.3264681226253} {194.261413n 227.102135n}}
+Graph:DSel
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{4.5421912084576 -3.8881530569949} {197.229759n 204.193575n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{4.0905656228084 -4.038694918878} {199.5334463n 202.0921211n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{3.0367725896268 -0.57623209556711} {200.4510112n 201.1790465n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{3.3640142565552 -0.97159136567753} {200.76310793n 200.99655403n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{3.9059649593343 -1.2425667170671} {200.83198378n 200.97020498n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{3.7253147250746 -2.1458178883656} {200.878535004n 200.965055141n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{4.6927330703407 -9.4582019466689} {200.856904969n 200.940787297n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{5.7724614554875 -16.507734103208} {200.888462312n 200.955200292n}}
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{-3.5673171871566 -19.825838270529} {200.932896677n 200.954694162n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{-3.9264548207463 -20.486059627885} {200.942536348n 200.948349011n}}
+Graph:DSel
+Graph axisconfig {AxisY(2,0) AxisX(0)} -range {{-22.599828900141 -38.858349983514} {200.9466566851n 200.9475178203n}}
+Graph:DSel
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0) AxisY(2,0) AxisY(3,0) AxisY(4,0) AxisY(5,0) AxisY(6,0) AxisY(7,0) AxisY(8,0) AxisY(9,0)} -range {all all all all all all all all all all all} -zoomed {0 0 0 0 0 0 0 0 0 0 0}
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0) AxisY(2,0) AxisY(3,0) AxisY(4,0) AxisY(5,0) AxisY(6,0) AxisY(7,0) AxisY(8,0) AxisY(9,0)} -range {all all all all all all all all all all all} -zoomed {0 0 0 0 0 0 0 0 0 0 0}
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0) AxisY(2,0) AxisY(3,0) AxisY(4,0) AxisY(5,0) AxisY(6,0) AxisY(7,0) AxisY(8,0) AxisY(9,0)} -range {all all all all all all all all all all all} -zoomed {0 0 0 0 0 0 0 0 0 0 0}
+Graph axisconfig {AxisX(0) AxisY(0,0) AxisY(1,0) AxisY(2,0) AxisY(3,0) AxisY(4,0) AxisY(5,0) AxisY(6,0) AxisY(7,0) AxisY(8,0) AxisY(9,0)} -range {all all all all all all all all all all all} -zoomed {0 0 0 0 0 0 0 0 0 0 0}
+Graph:DSel
+Mdi:ArrangeIcons
+wm geometry . 982x1031+2+111

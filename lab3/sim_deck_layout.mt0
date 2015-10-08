@@ -1,0 +1,8 @@
+$DATA1 SOURCE='HSPICE' VERSION='F-2011.09-SP2 32-BIT'
+.TITLE ' '
+ propigation_delay istatic          pstatic          start_dyn         
+ stop_dyn         idyn             pdyn             charge            
+ energy           temper           alter#            
+  2.750e-10       -3.077e-11       -7.691e-11        6.750e-09        
+  6.862e-09       -9.173e-05       -2.293e-04       -1.020e-14        
+ -2.551e-14        2.500e+01       1                 

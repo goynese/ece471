@@ -1,0 +1,4 @@
+***This is the netlist for an inverter in HSPICE***
+
+MP0 out in vdd gnd TSMC25DP L=0.24u W=960n
+MN0 out in gnd gnd TSMC25Dn L=0.24u W=480n

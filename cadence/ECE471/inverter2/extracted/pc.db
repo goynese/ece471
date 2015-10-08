@@ -1,0 +1,14 @@
+#
+NCSU_Analog_Parts pmos4 ivpcell
++1
+#
+NCSU_Analog_Parts nmos4 ivpcell
++0
+#ISCELL
+ECE471 metal1 symbolic
+I12
+I8
+I10
+#ISCELL
+ECE471 metal3 symbolic
+I9

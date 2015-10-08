@@ -1,0 +1,8 @@
+$DATA1 SOURCE='HSPICE' VERSION='F-2011.09-SP2 32-BIT'
+.TITLE 'in'
+ tphl             tplh             tfall            trise             
+ istatic          pstatic          start_dyn        stop_dyn          
+ idyn             pdyn             temper           alter#            
+    failed           failed           failed           failed         
+ -1.308e-04       -3.270e-04        2.184e-09        2.306e-09        
+ -6.639e-04       -1.660e-03        2.500e+01       1                 

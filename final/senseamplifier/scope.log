@@ -1,0 +1,56 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/g/goynese/ECE471/final/senseamplifier/sim_deck.tr0 1 openonly
+# PF:1
+wm geometry .sigmgr._PF:1 231x341+958+598
+wm geometry .sigmgr._PF:1 231x341+953+595
+wm geometry .sigmgr._PF:1 231x341+941+590
+wm geometry .sigmgr._PF:1 231x341+924+583
+wm geometry .sigmgr._PF:1 231x341+904+574
+wm geometry .sigmgr._PF:1 231x341+880+565
+wm geometry .sigmgr._PF:1 231x341+851+558
+wm geometry .sigmgr._PF:1 231x341+822+558
+wm geometry .sigmgr._PF:1 231x341+793+532
+wm geometry .sigmgr._PF:1 231x341+766+521
+wm geometry .sigmgr._PF:1 231x341+741+512
+wm geometry .sigmgr._PF:1 231x341+716+503
+wm geometry .sigmgr._PF:1 231x341+697+494
+wm geometry .sigmgr._PF:1 231x341+682+487
+wm geometry .sigmgr._PF:1 231x341+671+480
+wm geometry .sigmgr._PF:1 231x341+669+475
+wm geometry .sigmgr._PF:1 231x341+653+470
+wm geometry .sigmgr._PF:1 231x341+646+465
+wm geometry .sigmgr._PF:1 231x341+640+461
+wm geometry .sigmgr._PF:1 231x341+633+456
+wm geometry .sigmgr._PF:1 231x341+632+454
+wm geometry .sigmgr._PF:1 231x341+630+453
+wm geometry .sigmgr._PF:1 231x341+627+452
+wm geometry .sigmgr._PF:1 231x341+623+450
+wm geometry .sigmgr._PF:1 231x341+619+449
+wm geometry .sigmgr._PF:1 231x341+615+446
+wm geometry .sigmgr._PF:1 231x341+611+445
+wm geometry .sigmgr._PF:1 231x341+608+443
+wm geometry .sigmgr._PF:1 231x341+606+442
+wm geometry .sigmgr._PF:1 231x341+605+441
+wm geometry .sigmgr._PF:1 231x341+607+441
+wm geometry .sigmgr._PF:1 231x341+609+442
+wm geometry .sigmgr._PF:1 231x341+610+443
+wm geometry .sigmgr._PF:1 231x341+613+444
+wm geometry .sigmgr._PF:1 231x341+615+445
+wm geometry .sigmgr._PF:1 231x341+617+446
+wm geometry .sigmgr._PF:1 231x341+619+447
+wm geometry .sigmgr._PF:1 231x341+621+448
+wm geometry .sigmgr._PF:1 231x341+622+449
+wm geometry .sigmgr._PF:1 231x341+623+449
+wm geometry .sigmgr._PF:1 231x341+624+450
+pf:read PF:1 v(in)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 v(out)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+pf:read PF:1 v(se)
+# WF:1:3
+Graph addsignal WF:1:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal2
+ScopeSigMgr:Unload 0 {{(1) sim_deck.tr0}}

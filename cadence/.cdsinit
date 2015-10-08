@@ -1,0 +1,813 @@
+;==========================================================================
+;
+; $Id: cdsinit,v 1.14 2003/06/06 17:01:32 semick Exp $
+; 
+;--------------------------------------------------------------------------
+;
+;   NCSU Site .cdsinit file.
+;    
+;   The site startup file is read and executed when the Design Framework II
+;   software starts. The original is from the template in 
+;   /ncsu/cadence/tools/dfII/samples/local/cdsinit, but has been highly 
+;   customized.
+;
+;   This file loads application configuration files, bind key files, and
+;   SKILL files containing the NCSU customized environment.  
+;
+;   User customization files:
+;
+;     ./.cdsinit             - the working directory
+;     ~/.cdsinit             - the user's home directory
+;     $CLASS_LOCKER/.cdsinit - for class setups
+;
+;   This site file checks if a .cdsinit exists in the working directory
+;   and executes it. The site file then checks the home directory and 
+;   executes ~/.cdsinit if it exists, and likewise if one is found through
+;   the environment variable CLASS_LOCKER. Each of these may overwrite entries
+;   in the previous ones. A sample user .cdsinit file is in 
+;   /ncsu/cadence/local/cdssetup/user.cdsinit.
+;
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;   NOTE: Please read the entire file and the comments before you start
+;   customizing the file. 
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;
+;   In order for any window placements to work correctly the following 
+;   X resource should be set in the ~/.Xdefaults file.
+;
+;	Mwm*clientAutoPlace:             False
+;
+;   After setting the resource read in the resource file with the command
+;
+;	xrdb -merge ~/.Xdefaults
+;   
+;   and restart the Motif window manager.
+;
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;   
+;   The function 
+;
+;             prependInstallPath("string ")
+;
+;   adds the installation path to the string argument For this reason there
+;   should NOT be a space at the beginning of the string. There SHOULD be a
+;   space at the end of the string if more paths are to follow. This
+;   function is used to make path specification in this file independant of
+;   the exact installation path.
+;
+;   The function let() creates local variables which are in scope only
+;   between the parentheses. This ensures that global variables are not 
+;   accidentally modified.
+;
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;							
+;  CUSTOMIZATION FILES
+;
+;  At NCSU the site customization files are in /ncsu/cadence/local/cdssetup 
+;  This file is cdsinit, and there is a user.cdsinit.
+;
+;  Cadence provided customization files are delivered in:
+;
+;  <cds_install_dir>/samples/local/cdsinit          - site customization
+;  <cds_install_dir>/cdsuser/.cdsinit               - user customization
+;
+;
+;  ADMINISTRATION
+;
+;  /ncsu/cadence/tools/dfII/local is the site customization directory.
+;  This directory is not sent as part of the software. The site
+;  administrator must create this directory. Whenever software is
+;  upgraded the Cadence installation process retains the site
+;  administration directory if it exists.
+;
+;  At NCSU the local directory is /ncsu/cadence/local, and a link is placed
+;  in /ncsu/cadence/tools/dfII/local. See the documentation there for 
+;  complete details of the NCSU installation.
+;
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;
+;  Revision History
+;  ----------------
+;
+; $Log: cdsinit,v $
+; Revision 1.14  2003/06/06 17:01:32  semick
+; add streamIn.il to list of files config files loaded by NCSU CDK
+; this will help control the GDSII stream in process.
+;
+; Revision 1.13  2000/11/06 19:27:56  awglaser
+; changed NCSU_newLayoutMenuLabels to "t", since 445
+; is now the sitewide default
+;
+; Revision 1.12  2000/08/21 18:41:23  awglaser
+; Added definition of NCSU_newLayoutMenuLabels (used in
+; local/skill/menus/triggers.il)
+;
+; Revision 1.11  1999/12/07 20:29:04  awglaser
+; Now loads ~/.cdsinit, ./.cdsinit, $CLASS_LOCKER/.cdsinit, in that order.
+; (Was loading ~/.cdsinit after ./.cdsinit, which doesn't make much sense.)
+;
+; Revision 1.10  1999/11/11 20:09:20  jtschaff
+; added check for CDS_SITE env. var. definition
+;
+; Revision 1.9  1999/10/13 02:34:49  jtschaff
+; modified skillPath to reflect new menu directory structure
+;
+; Revision 1.8  1999/06/01 19:35:27  awglaser
+; Added checks to see if cdsenv and loadSkill.il files already loaded
+;
+; Revision 1.7  1999/03/04 18:26:02  jtschaff
+; added check for SKIP_CDSLIB_MANAGER env var at startup
+;
+; Revision 1.6  1998/12/11 07:00:26  jtschaff
+; added prependNCSUCDKInstallPath
+;
+; Revision 1.5  1998/03/13 16:00:55  jtschaff
+; removed rcs revision history
+;
+; Revision 1.4  1998/03/13 15:58:10  jtschaff
+; added pcells to skillpath
+;
+; Revision 1.3  1998/03/13 00:20:30  astanas
+; Copied "xmesg" program into local/bin for distribution.
+;
+; Revision 1.2  1998/03/04 19:21:08  astanas
+; Changed all paths to use prependInstallPath.
+;
+; Revision 1.1  1997/12/18 19:51:26  astanas
+; Initial revision
+;
+;
+;**************************************************************************
+
+; this function helps in making the CDK relocatable, ie, not hardwired to
+; local/
+procedure( prependNCSUCDKInstallPath( dir )
+    strcat( getShellEnvVar( "CDS_SITE" ) "/" dir )
+)
+
+;##########################################################################
+;#                                           
+;# POST MESSAGES AT STARTUP
+;#
+;##########################################################################
+
+; check if CDS_SITE is defined. if it isn't, prependNCSUCDKInstallPath() won't work
+; and there'll be error messages galore and all hell will break loose
+if( getShellEnvVar( "CDS_SITE" ) == nil then
+        hiGetAttention()
+        hiDisplayAppDBox( ?name 'cdssiteUndefError
+                          ?dboxBanner "\"CDS_SITE\" Undefined"
+                          ?dialogType hicErrorDialog
+                          ?dialogStyle 'modeless
+                          ?buttonLayout 'Close
+                          ?dboxText 
+" The UNIX environment variable \"CDS_SITE\" was not found. Your\n
+Cadence session will continue, but no NCSU CDK customizations\n
+will be loaded.\n"
+        )
+
+else    ; do all the NCSU CDK site stuff
+
+;---- Print "new version" message ----
+xmesg = prependNCSUCDKInstallPath( "bin/xmesg" )
+newusermesg = prependNCSUCDKInstallPath( "cdssetup/newusermesg" )
+
+if( getShellEnvVar( "SKIP_CDS_DIALOG" ) == nil && isFile(xmesg) && isFile( newusermesg )
+    system( strcat(xmesg " -name 'Cadence Update' " newusermesg "&") )
+)
+
+printf("Customizing ...\n")
+
+
+;##########################################################################
+;#
+;# Reload the site environment vars. The DLE variable "mfactorSplit" does
+;# not become effective unless the variables are loaded here. Don't know why...
+;#                                           
+;# Loads the user ~/.cdsenv file. This should be automatic after 4.4.2
+;#
+;##########################################################################
+
+;if( !boundp( 'NCSU_siteEnvAlreadyLoaded ) && 
+;        isFile( prependNCSUCDKInstallPath( "cdssetup/cdsenv" ) ) then
+;    NCSU_siteEnvAlreadyLoaded = t
+;	envLoadVals( ?envFile prependNCSUCDKInstallPath( "cdssetup/cdsenv" ) ?tool "ALL" )
+;  )
+
+if( !boundp( 'NCSU_homeEnvAlreadyLoaded ) &&
+        isFile( "./.cdsenv" ) then
+    NCSU_homeEnvAlreadyLoaded = t
+	envLoadVals( ?envFile "./.cdsenv" ?tool "ALL" )
+  )
+
+
+; Set the version type. (This is to correctly set menu triggers -- it's 
+; used in local/skill/menus/triggers.il.)
+
+NCSU_newLayoutMenuLabels = t
+
+
+;##########################################################################
+;#                                           
+;# LOAD APPLICATION CONFIGURATION FILES
+;#
+;##########################################################################
+;
+;  Configuration files are delivered in the directory:
+;  /ncsu/cadence/tools/dfII/samples/local
+;
+;          aaConfig.il                  - analog
+;          dmConfig.il                  - data management
+;          dciConfig.il                 - Cadence to Synopsys Interface
+;          leConfig.il                  - layout editor
+;          metConfig.il                 - Designing with Composer
+;                                         using metric measurements
+;          schConfig.il                 - schematic editor
+;          sysConfig.il                 - systems
+;          uiConfig.il                  - user interface
+;
+;  The configuration files are used to initialize parameters and
+;  forms.
+;
+;  SCHEMATIC DEFAULTS
+;            
+;  Most of the schematic defaults are set in the "schConfig.il" file.
+;  This file is documented in Chapter 10 of the design entry reference
+;  manual. The schematic form values may be set via the schSetEnv() 
+;  function All the variables and values are documented in chapter 10 
+;  or chapter 4 of the CAE skill reference Manual.
+;  Here is an example of setting the font height of note labels.
+;
+;  schSetEnv("noteFontHeight" 0.062500)
+;
+;
+;  LAYOUT EDITOR, PCELL                          
+;
+;  The layout editor works like the schematic editor. Here is an example 
+;  of turning off automatic command repetition.
+;
+;  leSetEnv("modalCommands" nil)
+;
+;------------------------------------------------------------------------
+;
+; Remove the comment if you want to load the specific configuration file
+; If you do not load the configuration files the applications will use the
+; default configurations.
+;
+
+let( (configFileList file path saveSkillPath)
+    configFileList = '(
+;                 "aaConfig.il" 
+;                 "dmConfig.il" 
+;                 "dciConfig.il"
+;                 "metConfig.il"
+;                 "sysConfig.il" 
+;                 "uiConfig.il" 
+;                 "leConfig.il" 
+;
+;
+; Load the schematic editor config file "schConfig.il" which references the 
+; custom NCSU sheet borders from the NCSU_Sheets_8ths library. 
+
+                  "schConfig.il"
+                  "streamIn.il"
+		                   
+   );---- end configFileList ----
+   
+;   This is the path that is searched for the files
+;   If you want to add another path add it here as a string
+;
+    path = strcat(
+       
+;              ".  ~  "
+              prependNCSUCDKInstallPath("skill/config_files ")
+             )
+    saveSkillPath=getSkillPath()
+    setSkillPath(path)
+
+    foreach(file configFileList 
+       if(isFile(file) then
+          loadi(file)
+         )
+    )
+    setSkillPath(saveSkillPath)
+)
+
+
+;##########################################################################
+;#                                           
+;# LOAD APPLICATION BIND KEY DEFINITIONS
+;#
+;##########################################################################
+;
+;The following bind key definition files are in cadence/tools/dfII/samples/local
+;
+;          leBindKeys.il                - layout editor
+;          schBindKeys.il               - schematic editor
+;
+;Add the comment ; if you do not want to load the specific bind key 
+;definition file. If you do not load the bind key definitions the
+;applications will not have any bind keys defined.
+;
+;If you load the bind key definition file but the application is not
+;registered ( product not licensed or checked out ) then you might get
+;a warning that looks like
+;
+; *WARNING* "Schematics is not registered yet"
+;
+;This warning can be ignored if you know that the product is not
+;licensed or checked out. Or, do a check to see if the application is 
+;registered, like in the following example, or like that in the 
+;common_bindkeys.il file.
+;
+; let( ( Apps )
+; Apps = hiGetBindKeyPrefixList()
+; if( member( "Layout" Apps ) then
+;     hiSetBindKey("Layout" "Ctrl<Key>F1" "hiGetCurrentWindow()->originMarkersOn = nil" )
+; ))
+;
+;--------------------------------------------------------------------------
+
+let( (bindKeyFileList file path saveSkillPath)
+    bindKeyFileList = '(
+                   "common_bindkeys.il"     ; JTS, from Cadence
+                    )
+    
+;   This is the path that is searched for the files
+    path = strcat(
+;
+;   If you want to add another path add it here as a string
+;
+              ".  ~  "
+              prependNCSUCDKInstallPath("cdssetup ")
+             )
+    saveSkillPath=getSkillPath()
+    setSkillPath(path)
+
+    foreach(file bindKeyFileList
+       if(isFile(file ) then
+          loadi(file)
+         )
+    )
+    setSkillPath(saveSkillPath)
+)
+
+;----
+;An individual user may wish to add some bindkeys of his/her own or
+;over ride some default loaded bindkeys.  For more information about
+;bindkeys see the manual "SKILL Reference Manual, Language Fundamentals", 
+;Chapter 4.
+;
+;Here is an example of setting one bindkey on "F2" than prints 
+;"Hello world" to the CIW when pressed in the CIW.
+; hiSetBindKey("Command Interpreter" "<Key>F2" "printf(\"Hello World\")") 
+;
+;Here is an example of setting keys for more than one application
+;
+; let( (app appList RegisteredApps)
+; RegisteredApps = hiGetBindKeyPrefixList()
+; appList = '( 
+;	 "Command Interpreter"
+;    "Schematics"
+;    "Symbol"
+;   
+;    Add other applications here 
+;
+;    )
+;
+;  foreach(app appList
+;      if( member( app RegisteredApps ) then
+;           hiSetBindKey(app "<Key>F4" "printf(\"Hello \")") 
+;           hiSetBindKey(app "<Key>F5" "printf(\"World\")") 
+;      )
+;  ))
+;
+;
+; 
+;##########################################################################
+;#
+;# SETTINGS FOR SKILL PATH and SKILL PROGRAMMING
+;#
+;##########################################################################
+;
+;  The function sstatus() sets the status of variables
+;  The variable writeProtect controls if a SKILL function can be
+;  redefined or not;
+;
+;  Any functions defined after writeProtect = t CANNOT be redefined
+;  Any functions defined after writeProtect = nil CAN be redefined
+;  If you are going to create SKILL programs and define functions set the
+;  status of writeProtect to nil at the beginning of your session.
+;
+;  Set skill search path. The SKILL search path contains directories
+;  to be searched to locate SKILL programs when program names are
+;  specified without full path names.
+;  The operation could be reading, writing or loading a SKILL program.
+;
+;  Source technology files are considered SKILL files and when loading 
+;  or dumping the technology file SKILL search path will be used.
+;
+;
+
+sstatus(writeProtect nil)
+
+let((skillPath)
+   skillPath= strcat(
+    ". ~ "  ; Current & home directory
+    prependNCSUCDKInstallPath("skill ")               
+    prependNCSUCDKInstallPath("skill/cdf ")           
+    prependNCSUCDKInstallPath("skill/menus ")         
+    prependNCSUCDKInstallPath("skill/menus/artist ")  
+    prependNCSUCDKInstallPath("skill/menus/ciw ")     
+    prependNCSUCDKInstallPath("skill/menus/ncsu ")     
+    prependNCSUCDKInstallPath("skill/menus/virtuoso ")
+    prependNCSUCDKInstallPath("skill/misc ")        
+    prependNCSUCDKInstallPath("skill/pcells ")     
+    prependNCSUCDKInstallPath("techfile ")  ; technology files
+   )
+   setSkillPath(skillPath)
+)
+;
+;
+;##########################################################################
+;#
+;# STARTING FRAMEMAKER AUTOMATICALLY and SETTING UP HELP
+;#
+;##########################################################################
+;
+;  The following call starts up Frameviewer when you start the CADENCE
+;  software. Frameviewer is used to view on-line documentation.
+;  The path of the Frameviewer executable is assumed to be
+;
+;  <cds_install_dir>/frame/bin/viewer
+;
+;  The Cadence supplied executable instdir returns the installation path.
+;
+;  If the frame <cds_install_dir>/frame hierarchy is not in your
+;  Cadence installtion kit but you have frameviewer ( or framemaker )
+;  installed in another path then
+;
+;  1. Change the path to the viewer in the command. 
+;
+;           OR
+;
+;  2. Make a soft link to the actual Frame installation directory
+;     before starting up Frameviewer.
+;
+;     Example:
+;          cd /usr/cadence/4.2.1
+;          ln -s /Frame frame
+;
+;  The function fmKickFM() returns 1 if any other Frame product is currently
+;  running in the foreground or background. The variable OpusStartedFrame is
+;  set if the Frame product is started.  It is reserved for future use. When
+;  the Frame product is started options specified with the UNIX variable
+;  FMOPTIONS are used if FMOPTIONS is defined.
+;
+;  You must wait about 10 seconds after the Frame product is started 
+;  before invoking help. The sleep 10 waits 10 seconds before proceeding 
+;  with the rest of the customization.
+;
+;  Frameviewer startup command (Not automatically started to save memory).
+;--------
+; 
+;  if( fmKickFM() != 1
+;  then
+;      OpusStartedFrame = t
+;      system(
+;   	   sprintf( nil
+;   		   "%s +viewerIsServer $FMOPTIONS > /dev/null ; sleep 10"
+;   			prependInstallPath( "frame/bin/viewer" )
+;   	   )
+;      )
+;  )
+;
+;
+;
+;##########################################################################
+;# VERIFICATION - DIVA/INQUERY/DRACULA ENCAPS    
+;##########################################################################
+;
+; There are no configuration variables for these applications to be set in
+; the .cdsinit. You may need to create a .simrc  file, using the example
+; in /ncsu/cadence/tools/dfII/cdsuser/.simrc
+;
+;
+;##########################################################################
+;# PLACE AND ROUTE - CELL3, CE, BE, PREVIEW,GE   
+;##########################################################################
+;
+; The geSetProbeNetStopLevel default is zero. 
+; To probe routing in channels, it must be >= 2.
+; geSetProbeNetStopLevel(0)  ; 20 is a good number.
+; 
+;
+;##########################################################################
+;# LAS and COMPACTOR                             
+;##########################################################################
+; 
+; There are no configuration variables for these applications to be set in
+; the .cdsinit. You need to add information to your technology file. See
+; the LAS and COMPACTOR reference manuals for details about technology
+; file additions.
+; 
+; 
+;##########################################################################
+;# SETTING AmPLD DEFAULTS (Data I/O Abel 4.x) 
+;##########################################################################
+;
+; No Setup is required if using the default system shipped from Cadence.
+; If you are using your own Abel or need to customize the system
+; see Appendix A of the Programmable Logic Design System Users Guide.
+;
+;
+;##########################################################################
+;# DESIGN FLOWS                               
+;##########################################################################
+; 
+; The design flows can be used with no customization, but customizing 
+; them for your personal preference can greatly enhance your 
+; productivity. Please See the Design Flow users guide for details.
+;
+;  Bring up top flow ...
+;
+;amdfTopFlow()
+;
+;
+;##########################################################################
+;# Analog Artist
+;##########################################################################
+;
+; Schematic cellview to cellview defaults for creating a symbol with Artist
+; IL interpreted labels. The default is to not create an Artist symbol.
+;
+; schSetEnv( "tsgTemplateType" "artist" )
+;
+;||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+; General Analog Simulation Environment Setup...
+;||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+;
+; The following is a list of simulation tool parameters which cannot be 
+; set by way of the Artist User Interface Options forms and therefore
+; can only be defined in the user's .cdsinit file.
+; 
+; If the value of numberOfSavedRuns is negative, no data will be copied or
+; deleted. If the value is a non-negative integer, then that number of
+; past runs (It is assumed that the run names are non-negative integers,
+; all others are ignored) are saved. (0 means don't copy the data at all,
+; and delete all other runs), otherwise all past runs are saved.
+; 
+;	envSetVal( "asimenv.misc" "numberOfSavedRuns" 'int 0 )
+;
+; By default, component CDF is not automatically updated when design 
+; variables are copied to the cellview.  To enable auto updating,
+; specify the following line in your .cdsinit file:
+;
+;	artEnableAutoDesignVarCdfUpdate()
+;
+; artDisableAutoDesignVarCdfUpdate() can be used to disable auto updating.
+; artGetAutoDesignVarCdfUpdate() will return t if auto updating is enabled,
+; or nil otherwise.
+;
+;
+;||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+; WAVEFORM WINDOW DEFAULTS
+;||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+;
+; This section explains how waveform window defaults can be overridden.
+;
+; Waveform window/subwindow options can be set using awvSetOptionValue().
+; E.g., if you want your subwindow to be in the strip mode when it is opened,
+; add the following line to .cdsinit (Option names may be strings or symbols).
+; 
+; 	awvSetOptionValue( "mode" "strip" )
+; or
+; 	awvSetOptionValue( 'mode "strip" )
+; 
+; The complete list of options is included below.
+; 
+; 
+; Boolean options:
+; ----------------
+; 
+;   Name                Purpose                 Default
+;   ----                -------                 -------
+; 
+;   cursorSuppressed    Tracking cursor         nil
+; 
+;   dateStamp           Date stamp
+;                       (top right corner)      nil
+; 
+;   displayAxes         Display axes            t
+; 
+;   displayAxesBy125    Axis labels by 1-2-5    nil
+; 
+;   displayAxesLabel    Axes labels             t
+; 
+;   displayGrids        Grid lines              nil
+; 
+;   displayMajorTicks   Major tick marks        t
+; 
+;   displayMinorTicks   Minor tick marks        t
+; 
+;   updateStatus        Updatability            t
+; 
+;   xLog                Log axis (X)            nil
+; 
+; 
+; String options:
+; ---------------
+; 
+;   Name                Purpose                 Default         Other choices
+;   ----                -------                 -------         -------------
+; 
+;   cursorAction        Snap to waveform or
+;                       actual data points      "line"          "data point"
+; 
+;   cursorPhase         Phase display (Smith)   "degree"        "radian"
+; 
+;   cursorValue         Value display (Smith)   "normalized impedance"
+;                                                      "normalized admittance"
+;                                                     "reflection coefficient"
+; 
+;   mode                Mode type               "composite"     "strip"
+;                                                               "smith"
+; 
+;   smithModeType       Smith Mode type         "impedance"     "admittance"
+;                                                               "polar"
+; 
+;   stripModeType       Strip Mode type         "analogStrip"
+;                                                            "analogComposite"
+; 
+;   style               Plot style              "auto"          "bar"
+;                                                               "scatterPlot"
+;                                                               "joined"
+; 
+; 
+; Integer options:
+; ----------------
+; 
+;   Name                Purpose                 Default         Other choices
+;   ----                -------                 -------         -------------
+; 
+;   cursorPrecision     Number of digits
+;                       of cursor output        4               Any integer
+;                                                               greater than 2
+;                                                               and less than
+;                                                               16
+; 
+;   numIdentifier       Number of identifiers
+;                       per waveform            6               Any positive
+;                                                               integer or
+;                                                               nil to get all
+; 
+; 
+; Hard copy options:
+; ------------------
+; 
+;   Name                Purpose                 Default         Other choices
+;   ----                -------                 -------         -------------
+; 
+;   hcCopyNum           Number of copies        1               Any positive
+;                                                               integer
+;
+;   hcDisplay           Display name            "display"       Defined in
+;                                                               the techfile
+;
+;   hcOrientation       Plot orientation        "automatic"     "portrait"
+;                                                               "landscape"
+;
+;   hcOutputFile        Plot to file only       nil             Name of the
+;                                                               output file
+;
+;   hcPaperSize         Plot paper size         Specified in .cdsplotinit
+;
+;   hcPlotterName       Plotter name            Specified in .cdsplotinit
+;
+;   hcTmpDir            Temporary scratch       "/usr/tmp"      Name of the
+;                       space                                   temp directory
+;
+;
+
+if( isCallable( 'awvSetOptionValue ) then
+	awvSetOptionValue( "hcDisplay" "psb" )
+	awvSetOptionValue( "hcTmpDir"  "/tmp" )
+)
+
+;
+; 
+; Note: Typing awvSetOptionValue( name value ) into the CIW will affect
+;	waveform windows/subwindows opened after that. To restore an option
+;	to its default value, type awvSetOptionDefault( name ).
+;
+;
+;
+;##########################################################################
+;#
+;# MISCELLANEOUS
+;#
+;##########################################################################
+;
+; Set your own prompt in the CIW. The first argument is the prompt.
+; The second argument is not used yet.
+;
+;setPrompts("Ready >" "")
+;
+;--------------------------------------------------------------------------
+; The variable "editor" defines the text editor to be used when any of
+; the applications invoke an editor. For example technology dump and 
+; edit operation opens an editor window. The editor may also be set by 
+; the unix environment variable EDITOR
+;
+;    setenv EDITOR 'xedit'
+;
+; When Design Framework is invoked the SKILL variable editor is set to the 
+; value of the unix variable EDITOR. If EDITOR is not defined the SKILL 
+; variable editor is set to "vi" You may also set the "editor" variable to 
+; execute a UNIX command that invokes an xterm window of given size and 
+; location and starts an editor program. For example:
+;
+;    editor = "xterm -geometry 80x40 -e emacs"
+;    editor = "xterm -geometry 85x50 -e vi"
+;
+; Size of xterm in the above example is 80 characters by 40 lines.
+; With some editors on certain platforms the variable editor must
+; be defined as shown above.
+;
+; Some application which require a text editor may be using the UNIX
+; variable EDITOR instead of the SKILL variable editor. It is a good
+; idea to set the UNIX variable EDITOR to the text editor of your
+; choice which will automatically set the SKILL variable editor.
+; 
+;--------------------------------------------------------------------------
+;
+; Load NCSU (and borrowed) SKILL routines
+;
+
+if( !boundp( 'NCSU_skillAlreadyLoaded ) then
+    NCSU_skillAlreadyLoaded = t
+    printf("Loading NCSU SKILL routines...\n")
+    load( prependNCSUCDKInstallPath( "skill/loadSkill.il" ) )
+  )
+;
+;
+;
+;##########################################################################
+;# Defaults for plot dialog boxes
+;##########################################################################
+lePlotTemplate  = prependNCSUCDKInstallPath( "cdssetup/layoutPlotTemplate" )
+schPlotTemplate = prependNCSUCDKInstallPath( "cdssetup/schPlotTemplate" )
+
+printf("END OF SITE CUSTOMIZATION\n")
+
+) ; end NCSU CDK site customizations
+;
+;
+;##########################################################################
+;#                                           
+;# LOAD USER CUSTOMIZATION FILES
+;#
+;##########################################################################
+;
+;The site customization file loads the user customization file(s).
+;
+
+if( !boundp( 'NCSU_homeAlreadyLoaded ) && 
+         (getShellEnvVar("PWD") != getShellEnvVar("HOME")) && 
+         isFile( "~/.cdsinit" ) then
+    NCSU_homeAlreadyLoaded = t
+    printf( "Loading ~/.cdsinit init file.\n" )
+    loadi( "~/.cdsinit" )
+  )
+
+if( !boundp( 'NCSU_cwdAlreadyLoaded ) && isFile( "./.cdsinit" ) then
+    NCSU_cwdAlreadyLoaded = t
+    printf( "Loading %s/.cdsinit init file.\n" getShellEnvVar("PWD") )
+    loadi( "./.cdsinit" )
+  )
+
+let( (classLocker)
+if( (classLocker = getShellEnvVar("CLASS_LOCKER")) != nil then
+	if( !boundp( 'NCSU_lockerAlreadyLoaded ) &&
+	         (getShellEnvVar("PWD") != classLocker) && 
+	         isFile( strcat( classLocker "/.cdsinit" ) ) then
+	    NCSU_lockerAlreadyLoaded = t
+    	printf( "Loading %s/.cdsinit init file.\n" classLocker)
+    	loadi( strcat( classLocker "/.cdsinit" ) )
+	  )
+))
+
+;
+;##########################################################################
+;# Open the Library Manager, position is set by .Xdefaults file
+;##########################################################################
+
+unless( getShellEnvVar("SKIP_CDSLIB_MANAGER") != nil
+    ddsOpenLibManager()
+)
+
+;
+;==== END OF THE SITE CUSTOMIZATION FILE ==================================
+; vim:ts=4:columns=132:set tw=0:
+
+loadi "./.cdsinit.user"

@@ -1,0 +1,22 @@
+;
+; .cdsinit.user
+; Initialization file for Cadence sessions
+; Jose' Silva 10/1/98
+;
+; Modify this file to fit your preferences. 
+;
+
+; Close the "What's new"
+ddsNewsClose()
+
+; Resize CIW
+hiResizeWindow(window(1) list(582:1 1267:341))
+
+; Open library manager
+ddsOpenLibManager()
+
+loadi "~cdsmgr/cdsmgr/common/schBindKeys.il"
+loadi "~cdsmgr/cdsmgr/common/leBindKeys.il"
+
+; More will be added later...
+

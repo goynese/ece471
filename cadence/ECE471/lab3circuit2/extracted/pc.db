@@ -1,0 +1,20 @@
+#
+NCSU_Analog_Parts pcapacitor ivpcell
++5
++4
+#
+NCSU_Analog_Parts pmos4 ivpcell
++3
++2
+#
+NCSU_Analog_Parts nmos4 ivpcell
++1
++0
+#ISCELL
+ECE471 metal1 symbolic
+I15
+I14
+I16
+#ISCELL
+ECE471 metal3 symbolic
+I9

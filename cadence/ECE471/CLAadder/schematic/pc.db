@@ -1,0 +1,27 @@
+#
+ECE471 CLAunit symbol
+I8
+#
+ECE471 CLAfulladder symbol
+I4
+I5
+I6
+I7
+#ISCELL
+basic ipin symbol
+PIN7
+PIN6
+PIN5
+PIN4
+PIN8
+PIN0
+PIN1
+PIN2
+PIN3
+#ISCELL
+basic opin symbol
+PIN13
+PIN12
+PIN11
+PIN10
+PIN9

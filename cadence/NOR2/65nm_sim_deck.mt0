@@ -1,0 +1,8 @@
+$DATA1 SOURCE='HSPICE' VERSION='F-2011.09-SP2 32-BIT'
+.TITLE ' '
+ tphl             tplh             istatic          pstatic           
+ start_dyn        stop_dyn         idyn             pdyn              
+ charge           energy           temper           alter#            
+  2.593e-11        5.082e-11       -1.726e-08       -1.726e-08        
+  8.307e-09        8.389e-09       -2.299e-05       -2.299e-05        
+ -1.869e-15       -1.869e-15         25.0000        1                 

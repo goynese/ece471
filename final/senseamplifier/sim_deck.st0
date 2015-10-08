@@ -1,0 +1,74 @@
+***** HSPICE -- F-2011.09-SP2 32-BIT (Feb 27 2012) linux ******
+ Input File: sim_deck
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   goynese              HOSTNAME: dear119-05.engr.oregonstate.edu
+ lic: HOSTID: 7446a09dab74         PID:      26914
+ lic: Using FLEXlm license file:
+ lic: 7188@license.eecs.oregonstate.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 11-aug-2014/2013.03
+ lic: 7(in_use)/50(total) FLOATING license(s) on SERVER license.eecs.oregonstate
+ lic:
+ init: begin read circuit files,  cpu clock=  5.00E-02
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/ad
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/ad
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/behave
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/bjt
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/burr_brn
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/comlinear
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/dio
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/fet
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/lin_tech
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/pci
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/signet
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/ti
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/tline
+       option search   = /usr/local/apps/synopsys/hspice_vF-2011.09-SP2/h
+                         spice/parts/xilinx
+       option runlvl
+       option ingold   =     2.00
+       option artist   =     2.00
+       option psf      =     2.00
+       option probe    =     0.00
+       option list
+       option node
+       option post
+       option accura
+ init: end read circuit files,  cpu clock=  6.00E-02 memory=    149 kb
+ init: begin check errors,  cpu clock=  6.00E-02
+ init: end check errors,  cpu clock=  6.00E-02 memory=    149 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  6.00E-02
+       establish matrix -- done,  cpu clock=  6.00E-02 memory=    152 kb
+       re-order matrix -- done,  cpu clock=  6.00E-02 memory=    152 kb
+ init: end setup matrix,  cpu clock=  6.00E-02 memory=    171 kb
+ dcop: begin dcop,  cpu clock=  6.00E-02
+ dcop: end dcop,  cpu clock=  7.00E-02 memory=    171 kb  tot_iter=      33
+ output: sim_deck.mt0
+ sweep: tran tran0    begin, stop_t=  5.00E-08 #sweeps=5001 cpu clock=  7.00E-02
+ tran: time= 5.0050E-09 tot_iter=     344 conv_iter=     141 cpu clock= 8.00E-02
+ tran: time= 1.0005E-08 tot_iter=     902 conv_iter=     362 cpu clock= 9.00E-02
+ tran: time= 1.5005E-08 tot_iter=    1771 conv_iter=     687 cpu clock= 1.00E-01
+ tran: time= 2.0000E-08 tot_iter=    2615 conv_iter=     998 cpu clock= 1.20E-01
+ tran: time= 2.5000E-08 tot_iter=    3406 conv_iter=    1291 cpu clock= 1.30E-01
+ tran: time= 3.0000E-08 tot_iter=    3769 conv_iter=    1449 cpu clock= 1.40E-01
+ tran: time= 3.5000E-08 tot_iter=    4123 conv_iter=    1603 cpu clock= 1.40E-01
+ tran: time= 4.0005E-08 tot_iter=    4482 conv_iter=    1759 cpu clock= 1.50E-01
+ tran: time= 4.5005E-08 tot_iter=    5324 conv_iter=    2075 cpu clock= 1.60E-01
+ tran: time= 5.0000E-08 tot_iter=    6164 conv_iter=    2386 cpu clock= 1.80E-01
+ sweep: tran tran0    end,  cpu clock=  1.80E-01 memory=    173 kb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
